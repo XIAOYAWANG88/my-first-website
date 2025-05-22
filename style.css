@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "ADLaM Display";
+    src: url("../Fonts/ttf/ADLaMDisplay-Regular.ttf");
+    }
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: ADLaM Display, sans-serif;
+     }
+    
+     body {
+         background-color: #F6ECD4;
+     }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    .container {
+        padding: 0 15px;
+     }
+    
+     /* Header */
+     header {
+         background: #D7B78E;
+         padding: 10px 0;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     }
+    
+     .header-content {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+     }
+    
+     .logo {
+         display: flex;
+         align-items: center;
+     }
+    
+     .logo img {
+         width: 305px;
+     }
+    
+     .nav-menu {
+         display: flex;
+         list-style: none;
+     }
+    
+     .nav-menu li {
+         margin-left: 20px;
+     }
+    
+     .nav-menu a {
+         text-decoration: none;
+         color: #666;
+         font-weight: 500;
+     }
+    
+     .nav-menu a:hover {
+         color: #4a90e2;
+     }
+    
+     .search-bar {
+         display: flex;
+         align-items: center;
+         height: 52px;
+     }
+    
+     .search-bar input {
+         padding: 8px 12px;
+         border: 1px solid #ddd;
+         border-radius: 10px;
+         width: 535px;
+         height: 52px;
+         outline: none;
+     }
+    
+     .search-bar i {
+         margin-left: -30px;
+         color: #999;
+     }
+    
+     .user-actions {
+         width: 188px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+     }
+    
+     .user-actions i {
+         margin-left: 15px;
+         font-size: 20px;
+         color: #666;
+         cursor: pointer;
+     }
+    
