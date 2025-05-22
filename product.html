@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catalog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="product.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="Pets Megastore Logo">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">Commodity</a></li>
+                    <li><a href="#">Commodity</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search content...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-actions">
+                   <img src="./images/icon1.png" alt="">
+                   <img src="./images/icon2.png" alt="">
+                   <img src="./images/icon3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#">Homepage</a>
+            <span>></span>
+            <a href="#">Catalog</a>
+            <span>></span>
+            <span class="current">Product details</span>
+        </div>
+
+        <!-- Back Button and Title -->
+        <div class="back-title">
+            <a href="#" class="back-button"><i class="fas fa-chevron-left"></i></a>
+            <h1>Product details</h1>
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-container">
+            <!-- Product Images -->
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="./images/Catalog/image1.png" alt="Orijen Fit & Slim Dog Food">
+                </div>
+                <div class="thumbnail-images">
+                    <div class="thumbnail active"><img src="./images/Catalog/image2.png" alt="Dog food ingredients"></div>
+                    <div class="thumbnail"><img src="./images/Catalog/image3.png" alt="Dog food bowl"></div>
+                    <div class="thumbnail"><img src="./images/Catalog/image4.jpg" alt="Dog eating food"></div>
+                    <div class="thumbnail"><img src="./images/Catalog/image5.png" alt="Dog with food package"></div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <div class="price-rating">
+                    <div class="price">$<span>99</span>.0</div>
+                    <div class="rating">
+                        <div class="stars">
+                            <img src="./images/Catalog/icon1.png" alt="">
+                            <img src="./images/Catalog/icon1.png" alt="">
+                            <img src="./images/Catalog/icon1.png" alt="">
+                            <img src="./images/Catalog/icon1.png" alt="">
+                            <img src="./images/Catalog/icon1.png" alt="">
+                        </div>
+                        <span class="rating-value">4.9</span>
+                    </div>
+                </div>
+
+                <h2 class="product-title">Flavored Pet Canned Food</h2>
+                <p class="product-description">Selected fresh chicken with tender</p>
+
+                <!-- Shipping Info -->
+                <div class="shipping-info">
+                    <div class="info-row">
+                        <div class="info-label">Shipping Place</div>
+                        <div class="info-value">Hangzhou, Zhejiang</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Shipping Fees</div>
+                        <div class="info-value">$5.99</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Shipping Time</div>
+                        <div class="info-value">24 hours</div>
+                    </div>
+                </div>
+
+                <!-- Flavor Options -->
+                <div class="options-section">
+                    <h3>Flavor</h3>
+                    <div class="options-grid">
+                        <div class="option">Chicken</div>
+                        <div class="option">Beef</div>
+                        <div class="option">Lamb</div>
+                        <div class="option">Duck & Sweet Potato</div>
+                        <div class="option">Salmon & Pumpkin</div>
+                        <div class="option">Tuna</div>
+                        <div class="option">Salmon</div>
+                    </div>
+                </div>
+
+                <!-- Package Options -->
+                <div class="options-section">
+                    <h3>package</h3>
+                    <div class="options-grid">
+                        <div class="option">3kg</div>
+                        <div class="option">7kg</div>
+                        <div class="option">12kg</div>
+                        <div class="option">18kg</div>
+                        <div class="option">36kg</div>
+                        <div class="option">52kg</div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="product-tabs">
+            <div class="tabs">
+                <div class="tab active" data-tab="characteristic">Characteristic</div>
+                <div class="tab" data-tab="compound">Compound</div>
+                <div class="tab" data-tab="advantages">Advantages</div>
+                <div class="tab" data-tab="nutrition">Nutrition</div>
+                <div class="tab" data-tab="specification">Specification</div>
+                <div class="tab" data-tab="safety">Safety Notes</div>
+                <div class="tab" data-tab="reviews">Reviews (149)</div>
+            </div>
+
+            <div class="tab-content active" id="characteristic">
+                <img src="./images/Catalog/image6.png" alt="">
+            </div>
+        </div>
+
+        <!-- You May Also Like -->
+        <div class="recommendations">
+            <h1>You May Also Like</h1>
+            <div class="recommendation-grid">
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="./images/Catalog/image7.png" alt="Orijen Original Grain-Free Cat Food">
+                    </div>
+                    <div class="recommendation-details">
+                        <div class="recommendation-stars-f">
+                        <div>
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        </div>
+                        <div class="recommendation-stars">4.9</div>
+                    </div>
+                    <h2>Orijen Original Grain-Free Cat Food</h2>
+                    <div class="recommendation-price-f">
+                        <div class="recommendation-price-r">
+                            $29.00
+                        </div>
+                        <div class="recommendation-price">
+                        <span class="currency">$</span>
+                        <span class="amount">9</span>
+                        <span class="cents">.90</span>
+                        </div>
+                    </div>
+                    <button class="add-cart-btn"><img src="./images/Catalog/icon3.png" alt=""></button>
+                    </div>
+                </div>
+
+               <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="./images/Catalog/images8.png" alt="Orijen Original Grain-Free Cat Food">
+                    </div>
+                    <div class="recommendation-details">
+                        <div class="recommendation-stars-f">
+                        <div>
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        </div>
+                        <div class="recommendation-stars">4.9</div>
+                    </div>
+                    <h2>Orijen Original Grain-Free Cat Food</h2>
+                    <div class="recommendation-price-f">
+                        <div class="recommendation-price-r">
+                            $39.00
+                        </div>
+                        <div class="recommendation-price">
+                        <span class="currency">$</span>
+                        <span class="amount">19</span>
+                        <span class="cents">.00</span>
+                        </div>
+                    </div>
+                    <button class="add-cart-btn"><img src="./images/Catalog/icon3.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="./images/Catalog/images9.png" alt="Orijen Original Grain-Free Cat Food">
+                    </div>
+                    <div class="recommendation-details">
+                        <div class="recommendation-stars-f">
+                        <div>
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        </div>
+                        <div class="recommendation-stars">4.9</div>
+                    </div>
+                    <h2>Orijen Original Grain-Free Cat Food</h2>
+                    <div class="recommendation-price-f">
+                        <div class="recommendation-price-r">
+                            $49.00
+                        </div>
+                        <div class="recommendation-price">
+                        <span class="currency">$</span>
+                        <span class="amount">29</span>
+                        <span class="cents">.00</span>
+                        </div>
+                    </div>
+                    <button class="add-cart-btn"><img src="./images/Catalog/icon3.png" alt=""></button>
+                    </div>
+                </div>
+                <div class="recommendation-item">
+                    <div class="recommendation-image">
+                        <img src="./images/Catalog/images10.jpg" alt="Orijen Original Grain-Free Cat Food">
+                    </div>
+                    <div class="recommendation-details">
+                        <div class="recommendation-stars-f">
+                        <div>
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        <img src="./images/Catalog/icon2.png" alt="">
+                        </div>
+                        <div class="recommendation-stars">4.9</div>
+                    </div>
+                    <h2>Orijen Original Grain-Free Cat Food</h2>
+                    <div class="recommendation-price-f">
+                        <div class="recommendation-price-r">
+                            $199.00
+                        </div>
+                        <div class="recommendation-price">
+                        <span class="currency">$</span>
+                        <span class="amount">99</span>
+                        <span class="cents">.00</span>
+                        </div>
+                    </div>
+                    <button class="add-cart-btn"><img src="./images/Catalog/icon3.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
