@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Megastore</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Notice Bar -->
+  <div class="top-bar">
+    <p>Order now for estimated delivery between Mon 26th May and Tue 27th May</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logo"><img src="logo.png" alt="Pets Megastore Logo" /></div>
+      <button class="nav-toggle">☰</button>
+      <nav class="nav-menu">
+        <ul>
+          <li class="has-dropdown">Dog ▼
+            <ul class="dropdown">
+              <li><a href="#">Food</a></li>
+              <li><a href="#">Toys</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">Cat ▼
+            <ul class="dropdown">
+              <li><a href="#">Food</a></li>
+              <li><a href="#">Toys</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">Other Pets ▼
+            <ul class="dropdown">
+              <li><a href="#">Fish</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">Pharmacy ▼
+            <ul class="dropdown">
+              <li><a href="#">Supplements</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Deals</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search content..." />
+        <i class="icon-search">🔍</i>
+      </div>
+      <div class="user-actions">
+        <i class="icon-user">👤</i>
+        <i class="icon-cart">🛒</i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb container">
+    <a href="#">Homepage</a> &gt; <span>Search</span>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container catalog-page">
+    <aside class="sidebar">
+      <section class="filter-group">
+        <h3>Pet type</h3>
+        <ul>
+          <li><label><input type="radio" name="pet" /> Dogs <span>(178)</span></label></li>
+          <li><label><input type="radio" name="pet" /> Cats <span>(124)</span></label></li>
+          <li><label><input type="radio" name="pet" /> Birds <span>(167)</span></label></li>
+          <li><label><input type="radio" name="pet" /> Fish <span>(123)</span></label></li>
+          <li><label><input type="radio" name="pet" /> Others <span>(115)</span></label></li>
+        </ul>
+      </section>
+      <section class="filter-group">
+        <h3>Product type</h3>
+        <ul>
+          <li><label><input type="checkbox" /> Dry food</label></li>
+          <li><label><input type="checkbox" /> Wet food</label></li>
+          <li><label><input type="checkbox" /> Treats</label></li>
+          <li><label><input type="checkbox" /> Accessories</label>
+            <ul class="nested">
+              <li><label><input type="checkbox" /> Cloth</label></li>
+              <li><label><input type="checkbox" /> Toys</label></li>
+              <li><label><input type="checkbox" /> Fillers</label></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="filter-group">
+        <h3>Price</h3>
+        <ul>
+          <li><label><input type="radio" name="price" /> Under $50</label></li>
+          <li><label><input type="radio" name="price" /> $50 to $100</label></li>
+          <li><label><input type="radio" name="price" /> $100 to $150</label></li>
+          <li><label><input type="radio" name="price" /> $150 to $200</label></li>
+          <li><label><input type="radio" name="price" /> $200 and above</label></li>
+        </ul>
+        <button class="btn-apply">Apply</button>
+      </section>
+      <section class="filter-group">
+        <h3>Brand</h3>
+        <ul>
+          <li><label><input type="checkbox" /> Royal Canin</label></li>
+          <li><label><input type="checkbox" /> Pro Plan</label></li>
+          <li><label><input type="checkbox" /> Friskies</label></li>
+          <li><label><input type="checkbox" /> Zealandia</label></li>
+          <li><label><input type="checkbox" /> Brit</label></li>
+          <li><a href="#" class="show-all">Show all</a></li>
+        </ul>
+      </section>
+    </aside>
+    <section class="products">
+      <h1>Catalog</h1>
+      <div class="product-grid">
+        <!-- 单个产品卡片示例 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/200" alt="Dry Cat Food" />
+          <h2>Dry Cat Food</h2>
+          <p class="price">$99.00</p>
+          <p class="rating">★★★★☆ (4.3)</p>
+          <button class="btn-cart">🛒</button>
+        </div>
+        <!-- 更多产品卡片... -->
+      </div>
+
+      <!-- 分页 -->
+      <div class="pagination">
+        <button>&lt;</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>&gt;</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Newsletter -->
+  <section class="newsletter container">
+    <h2>Get the best deals!</h2>
+    <p>Hear first about our exclusive offers and pet care advice.</p>
+    <form>
+      <input type="email" placeholder="Enter your email address" />
+      <button type="submit">Sign me up!</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="#">Shipping</a>
+        <a href="#">FAQ</a>
+        <a href="#">My Accounts</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Returns</a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Gift Certificates</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="social">
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
