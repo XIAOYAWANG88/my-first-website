@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Megastore</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Notice Bar -->
+  <div class="top-bar">
+    <p>Order now for estimated delivery between Mon 26th May and Tue 27th May</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logo"><img src="logo.png" alt="Pets Megastore Logo" /></div>
+      <button class="nav-toggle">☰</button>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Catalog</a></li>
+          <li><a href="#">Commodity</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search content..." />
+        <i class="icon-search">🔍</i>
+      </div>
+      <div class="user-actions">
+        <i class="icon-user">👤</i>
+        <i class="icon-cart">🛒<span class="cart-count">2</span></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb container">
+    <a href="#">Homepage</a> &gt; 
+    <a href="#">Catalog</a> &gt; 
+    <a href="#">Product details</a> &gt; 
+    <span>Shopping Cart</span>
+  </div>
+
+  <!-- Shopping Cart Content -->
+  <div class="container cart-page">
+    <section class="cart-items">
+      <div class="cart-header">
+        <a href="#" class="back-arrow">&lt;</a>
+        <h1>Shopping Cart</h1>
+      </div>
+
+      <!-- Cart Item -->
+      <div class="cart-item">
+        <img src="https://via.placeholder.com/100" alt="Dry Cat Food" />
+        <div class="item-info">
+          <h2>Dry Cat Food</h2>
+          <p class="special">Special Price</p>
+          <p class="item-price">$199.00</p>
+        </div>
+        <div class="quantity-control">
+          <button class="qty-btn minus">−</button>
+          <span class="qty">1</span>
+          <button class="qty-btn plus">+</button>
+        </div>
+        <button class="remove-item">×</button>
+      </div>
+
+      <!-- Cart Item -->
+      <div class="cart-item">
+        <img src="https://via.placeholder.com/100" alt="Stage Cat Food" />
+        <div class="item-info">
+          <h2>Stage Cat Food</h2>
+          <p class="special">Special Price</p>
+          <p class="item-price">$99.00</p>
+        </div>
+        <div class="quantity-control">
+          <button class="qty-btn minus">−</button>
+          <span class="qty">1</span>
+          <button class="qty-btn plus">+</button>
+        </div>
+        <button class="remove-item">×</button>
+      </div>
+
+      <!-- Recommendations -->
+      <div class="recommendations">
+        <h2>You may also like</h2>
+        <div class="recommend-list">
+          <!-- Example Product Card -->
+          <div class="prod-card">
+            <img src="https://via.placeholder.com/150" alt="CozyPuff Cat Bed" />
+            <h3>CozyPuff Cat Bed with Blanket</h3>
+            <p class="price">$19.90</p>
+            <button class="btn-cart">🛒</button>
+          </div>
+          <!-- 更多推荐... -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Summary -->
+    <aside class="order-summary">
+      <h2>Your order</h2>
+      <ul class="summary-list">
+        <li>Order Price: <span>$298.00</span></li>
+        <li>Discount: <span>$0.00</span></li>
+        <li>Shipping fees: <span>$5.99</span></li>
+        <li class="total">Price: <span>$303.99</span></li>
+      </ul>
+      <p class="note">Already enjoying the lowest price</p>
+      <button class="btn-checkout">Proceed to Checkout</button>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
