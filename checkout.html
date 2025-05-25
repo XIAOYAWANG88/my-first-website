@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Megastore</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Notice Bar -->
+  <div class="top-bar">
+    <p>Order now for estimated delivery between Mon 26th May and Tue 27th May</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logo"><img src="logo.png" alt="Pets Megastore Logo"></div>
+      <button class="nav-toggle">☰</button>
+      <nav class="nav-menu">
+        <ul>
+          <li class="has-dropdown"><a href="#">Dog</a></li>
+          <li class="has-dropdown"><a href="#">Cat</a></li>
+          <li class="has-dropdown"><a href="#">Other Pets</a></li>
+          <li class="has-dropdown"><a href="#">Pharmacy</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Deals</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search content...">
+        <i class="icon-search">🔍</i>
+      </div>
+      <div class="user-actions">
+        <i class="icon-user">👤</i>
+        <i class="icon-cart">🛒<span class="cart-count">2</span></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb container">
+    <a href="#">Homepage</a> &gt; 
+    <a href="#">Search</a> &gt; 
+    <a href="#">Product details</a> &gt; 
+    <a href="#">Shopping cart</a> &gt; 
+    <span>Checkout</span>
+  </div>
+
+  <!-- Main -->
+  <div class="container checkout-page">
+    <section class="checkout-form">
+      <div class="form-header">
+        <a href="#" class="back-arrow">&lt;</a>
+        <h1>Checkout</h1>
+      </div>
+      <!-- Progress Steps -->
+      <ul class="progress-steps">
+        <li class="completed">
+          <span class="step-number">1</span>
+          <span class="step-label">Select a product<br><small>Pick your favorite item</small></span>
+        </li>
+        <li class="current">
+          <span class="step-number">2</span>
+          <span class="step-label">Fill out the order form<br><small>Please enter your information</small></span>
+        </li>
+        <li>
+          <span class="step-number">3</span>
+          <span class="step-label">The order is complete<br><small>Please pay</small></span>
+        </li>
+      </ul>
+
+      <!-- Customer Details -->
+      <form>
+        <div class="field-group">
+          <input type="text" placeholder="First name">
+          <input type="text" placeholder="Last name">
+        </div>
+        <div class="field-group single">
+          <input type="text" placeholder="Phone number or email">
+        </div>
+        <div class="field-group">
+          <input type="text" placeholder="Country">
+          <input type="text" placeholder="Suburb">
+        </div>
+        <div class="field-group">
+          <input type="text" placeholder="State">
+          <input type="text" placeholder="Postcode">
+        </div>
+        <div class="field-group single">
+          <input type="text" placeholder="Address Line1">
+        </div>
+        <div class="field-group single">
+          <input type="text" placeholder="Address Line2">
+        </div>
+
+        <!-- Payment Method -->
+        <div class="payment-method">
+          <p>Payment Method</p>
+          <label><input type="radio" name="pay-method" checked> Apple Pay</label>
+          <label><input type="radio" name="pay-method"> Visa card</label>
+          <label><input type="radio" name="pay-method"> Google Pay</label>
+          <label><input type="radio" name="pay-method"> Paypal</label>
+        </div>
+
+        <!-- Card Details -->
+        <div class="card-details">
+          <p>Pay with Credit / Debit Card</p>
+          <input type="text" placeholder="Cardholder Name">
+          <input type="text" placeholder="Card Number">
+          <div class="field-group">
+            <input type="text" placeholder="Expiry Date">
+            <input type="text" placeholder="CVV">
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Order Summary -->
+    <aside class="order-summary">
+      <h2>Your order</h2>
+      <ul class="summary-list">
+        <li><span>Dry Cat Food</span><span>$199.00</span><span>− 1 +</span></li>
+        <li><span>Stage Cat Food</span><span>$99.00</span><span>− 1 +</span></li>
+        <li>Order Price:<span>$298.00</span></li>
+        <li>Discount:<span>$0.00</span></li>
+        <li>Shipping fees:<span>$5.99</span></li>
+        <li class="total">Price:<span>$303.99</span></li>
+      </ul>
+      <p class="note">Already enjoying the lowest price</p>
+      <button class="btn-checkout">Proceed to Checkout</button>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

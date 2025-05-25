@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Megastore</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Notice Bar -->
+  <div class="top-bar">
+    <p>Order now for estimated delivery between Mon 26th May and Tue 27th May</p>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <div class="logo"><img src="logo.png" alt="Pets Megastore Logo"></div>
+      <button class="nav-toggle">☰</button>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#">Dog</a></li>
+          <li><a href="#">Cat</a></li>
+          <li><a href="#">Other Pets</a></li>
+          <li><a href="#">Pharmacy</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Deals</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search content...">
+        <i class="icon-search">🔍</i>
+      </div>
+      <div class="user-actions">
+        <i class="icon-user">👤</i>
+        <i class="icon-cart">🛒<span class="cart-count">0</span></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb container">
+    <a href="#">Homepage</a> &gt;
+    <a href="#">Search</a> &gt;
+    <a href="#">Product details</a> &gt;
+    <a href="#">Shopping cart</a> &gt;
+    <a href="#">Checkout</a> &gt;
+    <span>Checkout Successful</span>
+  </div>
+
+  <!-- Success Content -->
+  <div class="container checkout-success-page">
+    <!-- Progress Steps -->
+    <ul class="progress-steps">
+      <li class="completed">
+        <span class="step-number">1</span>
+        <span class="step-label">Select a product<br><small>Pick your favorite item</small></span>
+      </li>
+      <li class="completed">
+        <span class="step-number">2</span>
+        <span class="step-label">Fill out the order form<br><small>Please enter your information</small></span>
+      </li>
+      <li class="completed">
+        <span class="step-number">3</span>
+        <span class="step-label">The order is complete<br><small>Please pay</small></span>
+      </li>
+    </ul>
+
+    <div class="success-content">
+      <!-- Order Summary -->
+      <section class="order-summary success-summary">
+        <h2>Check order</h2>
+        <ul class="summary-list">
+          <li>
+            <img src="https://via.placeholder.com/60" alt="Dry Cat Food">
+            <div class="item-info">
+              <p>Dry Cat Food</p>
+              <p>$199.00</p>
+            </div>
+            <div class="qty">×1</div>
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/60" alt="Stage Cat Food">
+            <div class="item-info">
+              <p>Stage Cat Food</p>
+              <p>$99.00</p>
+            </div>
+            <div class="qty">×1</div>
+          </li>
+          <li>Order Price: <span>$298.00</span></li>
+          <li>Discount: <span>$0.00</span></li>
+          <li>Shipping fees: <span>$5.99</span></li>
+          <li class="total">Price: <span>$303.99</span></li>
+        </ul>
+      </section>
+
+      <!-- Success Message -->
+      <section class="checkout-message">
+        <img src="success-illustration.png" alt="Success Illustration">
+        <h2>Your checkout has been successfully completed!</h2>
+        <p>We will surely live up to your trust and provide you with a satisfying shopping experience.</p>
+        <button class="btn-return">Return to Page</button>
+      </section>
+    </div>
+
+    <!-- Recommendations -->
+    <section class="recommendations">
+      <h2>You May Also Like</h2>
+      <div class="recommend-list">
+        <!-- Repeat product cards -->
+        <div class="prod-card">
+          <img src="https://via.placeholder.com/150" alt="Orijen Original Grain-Free Cat Food">
+          <h3>Orijen Original Grain-Free Cat Food</h3>
+          <p class="price">$99.00</p>
+          <button class="btn-cart">🛒</button>
+        </div>
+        <div class="prod-card">
+          <img src="https://via.placeholder.com/150" alt="ChewyBall Durable Dog Toy">
+          <h3>ChewyBall Durable Dog Toy</h3>
+          <p class="price">$9.90</p>
+          <button class="btn-cart">🛒</button>
+        </div>
+        <div class="prod-card">
+          <img src="https://via.placeholder.com/150" alt="CalmKitty Aromatherapy Cat Candle">
+          <h3>CalmKitty Aromatherapy Cat Candle</h3>
+          <p class="price">$19.90</p>
+          <button class="btn-cart">🛒</button>
+        </div>
+        <div class="prod-card">
+          <img src="https://via.placeholder.com/150" alt="SnuggleNest Cozy Pet Bean Bag">
+          <h3>SnuggleNest Cozy Pet Bean Bag</h3>
+          <p class="price">$29.00</p>
+          <button class="btn-cart">🛒</button>
+        </div>
+        <!-- 更多产品卡片，可复制粘贴上述结构 -->
+      </div>
+    </section>
+  </div>
+
+  <!-- Newsletter -->
+  <section class="newsletter container">
+    <h2>Get the best deals!</h2>
+    <p>Hear first about our exclusive offers and pet care advice.</p>
+    <form>
+      <input type="email" placeholder="Enter your email address">
+      <button type="submit">Sign me up!</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="#">Shipping</a>
+        <a href="#">FAQ</a>
+        <a href="#">My Accounts</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Returns</a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Gift Certificates</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="social">
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
