@@ -3,117 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets Megastore</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
 </head>
 <body>
-  <!-- Top Notice Bar -->
-  <div class="top-bar">
-    <p>Order now for estimated delivery between Mon 26th May and Tue 27th May</p>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <div class="container header-content">
-      <div class="logo"><img src="logo.png" alt="Pets Megastore Logo" /></div>
-      <button class="nav-toggle">☰</button>
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Catalog</a></li>
-          <li><a href="#">Commodity</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="search-bar">
-        <input type="text" placeholder="Search content..." />
-        <i class="icon-search">🔍</i>
-      </div>
-      <div class="user-actions">
-        <i class="icon-user">👤</i>
-        <i class="icon-cart">🛒<span class="cart-count">2</span></i>
-      </div>
-    </div>
-  </header>
-
-  <!-- Breadcrumb -->
-  <div class="breadcrumb container">
-    <a href="#">Homepage</a> &gt; 
-    <a href="#">Catalog</a> &gt; 
-    <a href="#">Product details</a> &gt; 
-    <span>Shopping Cart</span>
-  </div>
-
-  <!-- Shopping Cart Content -->
-  <div class="container cart-page">
-    <section class="cart-items">
-      <div class="cart-header">
-        <a href="#" class="back-arrow">&lt;</a>
-        <h1>Shopping Cart</h1>
-      </div>
-
-      <!-- Cart Item -->
-      <div class="cart-item">
-        <img src="https://via.placeholder.com/100" alt="Dry Cat Food" />
-        <div class="item-info">
-          <h2>Dry Cat Food</h2>
-          <p class="special">Special Price</p>
-          <p class="item-price">$199.00</p>
+    <div class="top-bar">
+        <span>Order now for estimated delivery between Mon 26th May and Tue 27th May</span>
+        <div class="icon-box">
+            <span>
+                <img src="images/icon_addr.png" alt="">
+                Deliver to Sydney, 2000</span>
+            <img src="images/icon_user.png" alt="">
+            <img src="images/icon_menu.png" alt="">
+            <img src="images/icon_cart.png" alt="">
+    
         </div>
-        <div class="quantity-control">
-          <button class="qty-btn minus">−</button>
-          <span class="qty">1</span>
-          <button class="qty-btn plus">+</button>
-        </div>
-        <button class="remove-item">×</button>
       </div>
-
-      <!-- Cart Item -->
-      <div class="cart-item">
-        <img src="https://via.placeholder.com/100" alt="Stage Cat Food" />
-        <div class="item-info">
-          <h2>Stage Cat Food</h2>
-          <p class="special">Special Price</p>
-          <p class="item-price">$99.00</p>
+      <div class="main-header">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
         </div>
-        <div class="quantity-control">
-          <button class="qty-btn minus">−</button>
-          <span class="qty">1</span>
-          <button class="qty-btn plus">+</button>
+        <div class="search-box">
+          <input type="text" placeholder="Search content...">
+          <button><i class="ri-search-line"></i></button>
         </div>
-        <button class="remove-item">×</button>
+        <div class="icons">
+            We check thousands <br/>of prices to beat daily*
+        </div>
       </div>
-
-      <!-- Recommendations -->
-      <div class="recommendations">
-        <h2>You may also like</h2>
-        <div class="recommend-list">
-          <!-- Example Product Card -->
-          <div class="prod-card">
-            <img src="https://via.placeholder.com/150" alt="CozyPuff Cat Bed" />
-            <h3>CozyPuff Cat Bed with Blanket</h3>
-            <p class="price">$19.90</p>
-            <button class="btn-cart">🛒</button>
+      <div class="main-nav">
+        <a href="#">Dog <img src="images/icon_down.png"></a>
+        <a href="#">Cat <img src="images/icon_down.png"></a>
+        <a href="#">Other Pets <img src="images/icon_down.png"></a>
+        <a href="#">Pharmacy <img src="images/icon_down.png"></a>
+        <a href="#">Services <img src="images/icon_down.png"></a>
+        <a href="#">Learn</a>
+        <a href="#">Deals</a>
+      </div>
+      <main class="cart-top">
+        <div class="detail-nav">
+            <a href="index.html">Homepage</a>
+            <i class="ri-arrow-drop-right-line"></i>
+            <a href="list.html">Search</a>
+            <i class="ri-arrow-drop-right-line"></i>
+            <a href="detail.html">Product details</a>
+            <i class="ri-arrow-drop-right-line"></i>
+            <a href="javascript:;" style="color: #333;">Shopping Cart</a>
+            
+        </div>
+        <div class="section-header">
+           <img src="images//down.png" alt="">
+            <h2>Product details</h2>
+        </div>
+      </main>
+    <main class="cart-main">
+        <div class="products-list">
+            <div class="cart-list">
+                <div class="cart-item">
+                    <img class="cart-item-img" src="images/img1.png" alt="">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">Dry Cat Food</div>
+                        <div class="cart-item-desc">Special Price</div>
+                        <div class="cart-item-price">$199.00</div>
+                    </div>
+                    <div class="cart-item-qty">
+                        <button class="cart-qty-btn cart-qty-minus">-</button>
+                        <span class="cart-qty-value">1</span>
+                        <button class="cart-qty-btn cart-qty-plus">+</button>
+                    </div>
+                    <div class="cart-item-total">$199.00</div>
+                    <button class="cart-item-remove"><i class="ri-close-line"></i></button>
+                </div>
+                <div class="cart-item">
+                    <img class="cart-item-img" src="images/img2.png" alt="">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">Stage Cat Food</div>
+                        <div class="cart-item-desc">Special Price</div>
+                        <div class="cart-item-price">$99.00</div>
+                    </div>
+                    <div class="cart-item-qty">
+                        <button class="cart-qty-btn cart-qty-minus">-</button>
+                        <span class="cart-qty-value">1</span>
+                        <button class="cart-qty-btn cart-qty-plus">+</button>
+                    </div>
+                    <div class="cart-item-total">$99.00</div>
+                    <button class="cart-item-remove"><i class="ri-close-line"></i></button>
+                </div>
+            </div>
+            <div class="recommended-products detail-recommended-products">
+                <div class="products-grid">
+                    <!-- 产品卡片 -->
+                    <div class="product-card">
+                    <img src="images/img1.png" alt="">
+                    <div class="product-info">
+                        <div class="stars">★★★★★ <span>4.9</span></div>
+                        <div class="title">NatureBlend Grain-Free Canned Cat Food</div>
+                        <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                        <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                    </div>
+                    </div>
+                    <div class="product-card">
+                    <img src="images/img3.png" alt="">
+                    <div class="product-info">
+                        <div class="stars">★★★★★ <span>4.9</span></div>
+                        <div class="title">PlayPaw Interactive Cat Teaser Toy</div>
+                        <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                        <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                    </div>
+                    </div>
+                    <div class="product-card">
+                    <img src="images/img3.png" alt="">
+                    <div class="product-info">
+                        <div class="stars">★★★★★ <span>4.9</span></div>
+                        <div class="title">FreshMist Pet Odor Neutralizing Spray</div>
+                        <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                        <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                    </div>
+                    </div>
+                    <div class="product-card">
+                    <img src="images/img4.png" alt="">
+                    <div class="product-info">
+                        <div class="stars">★★★★★ <span>4.9</span></div>
+                        <div class="title">PawPod Compact Cat Speaker</div>
+                        <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                        <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                    </div>
+                    </div>
+                    <div class="product-card">
+                    <img src="images/img1.png" alt="">
+                    <div class="product-info">
+                        <div class="stars">★★★★★ <span>4.9</span></div>
+                        <div class="title">Dry Cat Food</div>
+                        <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                        <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                    </div>
+                    </div>
+                    <div class="product-card">
+                    <img src="images/img2.png" alt="">
+                    <div class="product-info">
+                        <div class="stars">★★★★★ <span>4.9</span></div>
+                        <div class="title">ChewyBall Durable Dog Toy</div>
+                        <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                        <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                    </div>
+                    </div>
+                    <div class="product-card">
+                    <img src="images/img3.png" alt="">
+                    <div class="product-info">
+                        <div class="stars">★★★★★ <span>4.9</span></div>
+                        <div class="title">CalmKitty Aromatherapy Cat Candle</div>
+                        <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                        <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                    </div>
+                    </div>
+                    <div class="product-card">
+                    <img src="images/img4.png" alt="">
+                    <div class="product-info">
+                        <div class="stars">★★★★★ <span>4.9</span></div>
+                        <div class="title">SnuggleNest Cozy Pet Bean Bag</div>
+                        <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                        <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                    </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="images/img1.png" alt="">
+                        <div class="product-info">
+                            <div class="stars">★★★★★ <span>4.9</span></div>
+                            <div class="title">Dry Cat Food</div>
+                            <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                            <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                        </div>
+                        </div>
+                        <div class="product-card">
+                        <img src="images/img2.png" alt="">
+                        <div class="product-info">
+                            <div class="stars">★★★★★ <span>4.9</span></div>
+                            <div class="title">ChewyBall Durable Dog Toy</div>
+                            <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                            <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                        </div>
+                        </div>
+                        <div class="product-card">
+                        <img src="images/img3.png" alt="">
+                        <div class="product-info">
+                            <div class="stars">★★★★★ <span>4.9</span></div>
+                            <div class="title">CalmKitty Aromatherapy Cat Candle</div>
+                            <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                            <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                        </div>
+                        </div>
+                        <div class="product-card">
+                        <img src="images/img4.png" alt="">
+                        <div class="product-info">
+                            <div class="stars">★★★★★ <span>4.9</span></div>
+                            <div class="title">SnuggleNest Cozy Pet Bean Bag</div>
+                            <div class="price"><span class="old">$199.00</span><span class="new">$19.00</span></div>
+                            <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <div class="cart-summary-title">Your order</div>
+            <div class="cart-summary-row">
+                <span>Order Price:</span>
+                <span>$298.0</span>
+            </div>
+            <div class="cart-summary-row">
+                <span>Discount:</span>
+                <span>$0.0</span>
+            </div>
+            <div class="cart-summary-row">
+                <span>shipping fees:</span>
+                <span>$5.99</span>
+            </div>
+            <div class="cart-summary-divider"></div>
+            <div class="cart-summary-row cart-summary-total">
+                <span>Price:</span>
+                <span>$303.99</span>
+            </div>
+            <div class="cart-summary-price">
+               <img src="images/Frame.png" alt="">
+                <div>
+                    <div class="cart-summary-final-price">Price: <span>$303.99</span></div>
+                    <div class="cart-summary-tip">Already enjoying the lowest price</div>
+                </div>
+               
+            </div>
+            <button class="cart-summary-btn">Proceed to Checkout</button>
+        </div>
+    </main>
+     <!-- 页脚 -->
+     <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-newsletter">
+            <div class="newsletter-left">
+              <div class="newsletter-title">Get the best deals!</div>
+              <div class="newsletter-desc">Hear first about our exclusive offers and pet care advice.</div>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email address">
+                <button>Sign me up!</button>
+              </div>
+            </div>
+            <div class="newsletter-right">
+              <div>Our experts are available 24/7</div>
+              <div>Our phone number: 5632749173</div>
+              <div>Chat now</div>
+            </div>
           </div>
-          <!-- 更多推荐... -->
         </div>
-      </div>
-    </section>
-
-    <!-- Order Summary -->
-    <aside class="order-summary">
-      <h2>Your order</h2>
-      <ul class="summary-list">
-        <li>Order Price: <span>$298.00</span></li>
-        <li>Discount: <span>$0.00</span></li>
-        <li>Shipping fees: <span>$5.99</span></li>
-        <li class="total">Price: <span>$303.99</span></li>
-      </ul>
-      <p class="note">Already enjoying the lowest price</p>
-      <button class="btn-checkout">Proceed to Checkout</button>
-    </aside>
-  </div>
-
-  <script src="script.js"></script>
+        <div class="footer-main">
+          <div class="footer-logo-nav">
+            <div class="footer-logo">
+              <img src="images/big_logo.png" alt="Logo" />
+            
+            </div>
+            <div class="footer-nav">
+                <ul>
+                <li>Shipping</li>
+                <li>FAQ</li>
+                <li>My Accounts</li>
+                <li>Terms & Conditions</li>
+                <li>Returns</li>
+                </ul>
+           
+                <div class="footer-links">
+                    <ul>
+                    <li>Gift Certificates</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    </ul>
+                    <div class="footer-social">
+                        <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" />
+                        <img src="images/verified-seal.png" alt="Facebook" />
+    
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+          Copyright © Pets Megastore. Site developed by Technology Matters
+        </div>
+      </footer>
 </body>
 </html>
