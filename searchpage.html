@@ -1,174 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets Megastore</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Top Notice Bar -->
-  <div class="top-bar">
-    <p>Order now for estimated delivery between Mon 26th May and Tue 27th May</p>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <div class="container header-content">
-      <div class="logo"><img src="logo.png" alt="Pets Megastore Logo" /></div>
-      <button class="nav-toggle">☰</button>
-      <nav class="nav-menu">
-        <ul>
-          <li class="has-dropdown">Dog ▼
-            <ul class="dropdown">
-              <li><a href="#">Food</a></li>
-              <li><a href="#">Toys</a></li>
-            </ul>
-          </li>
-          <li class="has-dropdown">Cat ▼
-            <ul class="dropdown">
-              <li><a href="#">Food</a></li>
-              <li><a href="#">Toys</a></li>
-            </ul>
-          </li>
-          <li class="has-dropdown">Other Pets ▼
-            <ul class="dropdown">
-              <li><a href="#">Fish</a></li>
-            </ul>
-          </li>
-          <li class="has-dropdown">Pharmacy ▼
-            <ul class="dropdown">
-              <li><a href="#">Supplements</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Learn</a></li>
-          <li><a href="#">Deals</a></li>
-        </ul>
-      </nav>
-      <div class="search-bar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>searchpage</title>
+    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/searchpage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+    />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+      <span
+        >Order now for estimated delivery between Mon 26th May and Tue 27th
+        May</span
+      >
+      <div class="icon-box">
+        <span>
+          <img src="images/icon_addr.png" alt="" />
+          Deliver to Sydney, 2000</span
+        >
+        <img src="images/icon_user.png" alt="" />
+        <img src="images/icon_menu.png" alt="" />
+        <img src="images/icon_cart.png" alt="" />
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+      <div class="search-box">
         <input type="text" placeholder="Search content..." />
-        <i class="icon-search">🔍</i>
-      </div>
-      <div class="user-actions">
-        <i class="icon-user">👤</i>
-        <i class="icon-cart">🛒</i>
-      </div>
-    </div>
-  </header>
-
-  <!-- Breadcrumb -->
-  <div class="breadcrumb container">
-    <a href="#">Homepage</a> &gt; <span>Search</span>
-  </div>
-
-  <!-- Main Content -->
-  <div class="container catalog-page">
-    <aside class="sidebar">
-      <section class="filter-group">
-        <h3>Pet type</h3>
-        <ul>
-          <li><label><input type="radio" name="pet" /> Dogs <span>(178)</span></label></li>
-          <li><label><input type="radio" name="pet" /> Cats <span>(124)</span></label></li>
-          <li><label><input type="radio" name="pet" /> Birds <span>(167)</span></label></li>
-          <li><label><input type="radio" name="pet" /> Fish <span>(123)</span></label></li>
-          <li><label><input type="radio" name="pet" /> Others <span>(115)</span></label></li>
-        </ul>
-      </section>
-      <section class="filter-group">
-        <h3>Product type</h3>
-        <ul>
-          <li><label><input type="checkbox" /> Dry food</label></li>
-          <li><label><input type="checkbox" /> Wet food</label></li>
-          <li><label><input type="checkbox" /> Treats</label></li>
-          <li><label><input type="checkbox" /> Accessories</label>
-            <ul class="nested">
-              <li><label><input type="checkbox" /> Cloth</label></li>
-              <li><label><input type="checkbox" /> Toys</label></li>
-              <li><label><input type="checkbox" /> Fillers</label></li>
+        <button><i class="ri-search-line"></i></button>
+        <div class="search-dropdown" id="searchDropdown">
+          <div class="search-dropdown-left">
+            <ul>
+              <li><a href="searchpage.html">cat</a></li>
+              <li><a href="searchpage.html">cat toys</a></li>
+              <li><a href="searchpage.html">cat bag</a></li>
+              <li><a href="searchpage.html">cat litter</a></li>
+              <li><a href="searchpage.html">cat tree</a></li>
+              <li><a href="searchpage.html">cat grooming</a></li>
+              <li><a href="searchpage.html">cat food</a></li>
+              <li><a href="searchpage.html">cat clothes</a></li>
+              <li><a href="searchpage.html">cat treats</a></li>
+              <li><a href="searchpage.html">cat bed</a></li>
             </ul>
-          </li>
-        </ul>
-      </section>
-      <section class="filter-group">
-        <h3>Price</h3>
-        <ul>
-          <li><label><input type="radio" name="price" /> Under $50</label></li>
-          <li><label><input type="radio" name="price" /> $50 to $100</label></li>
-          <li><label><input type="radio" name="price" /> $100 to $150</label></li>
-          <li><label><input type="radio" name="price" /> $150 to $200</label></li>
-          <li><label><input type="radio" name="price" /> $200 and above</label></li>
-        </ul>
-        <button class="btn-apply">Apply</button>
-      </section>
-      <section class="filter-group">
-        <h3>Brand</h3>
-        <ul>
-          <li><label><input type="checkbox" /> Royal Canin</label></li>
-          <li><label><input type="checkbox" /> Pro Plan</label></li>
-          <li><label><input type="checkbox" /> Friskies</label></li>
-          <li><label><input type="checkbox" /> Zealandia</label></li>
-          <li><label><input type="checkbox" /> Brit</label></li>
-          <li><a href="#" class="show-all">Show all</a></li>
-        </ul>
-      </section>
-    </aside>
-    <section class="products">
-      <h1>Catalog</h1>
-      <div class="product-grid">
-        <!-- 单个产品卡片示例 -->
-        <div class="product-card">
-          <img src="https://via.placeholder.com/200" alt="Dry Cat Food" />
-          <h2>Dry Cat Food</h2>
-          <p class="price">$99.00</p>
-          <p class="rating">★★★★☆ (4.3)</p>
-          <button class="btn-cart">🛒</button>
+          </div>
+          <div class="search-dropdown-right">
+            <div class="suggest-title">Suggested Products</div>
+            <div class="suggest-products">
+              <div class="suggest-product-card">
+                <a href="detail.html">
+                  <img src="images/img1.png" alt="" />
+                  <div class="suggest-info">
+                    <div class="stars">★★★★★ <span>4.9</span></div>
+                    <div class="title">NatureBlend Grain-Free Canned Cat Food</div>
+                    <div class="price">$19.00</div>
+                    <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                  </div>
+                </a>
+              </div>
+              <div class="suggest-product-card">
+                <a href="detail.html">
+                  <img src="images/img3.png" alt="" />
+                  <div class="suggest-info">
+                    <div class="stars">★★★★★ <span>4.9</span></div>
+                    <div class="title">PlayPaw Interactive Cat Teaser Toy</div>
+                    <div class="price">$9.00</div>
+                    <button class="cart-btn"><i class="ri-shopping-cart-line"></i></button>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- 更多产品卡片... -->
       </div>
-
-      <!-- 分页 -->
-      <div class="pagination">
-        <button>&lt;</button>
-        <button class="active">1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>&gt;</button>
-      </div>
-    </section>
-  </div>
-
-  <!-- Newsletter -->
-  <section class="newsletter container">
-    <h2>Get the best deals!</h2>
-    <p>Hear first about our exclusive offers and pet care advice.</p>
-    <form>
-      <input type="email" placeholder="Enter your email address" />
-      <button type="submit">Sign me up!</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-content">
-      <div class="footer-links">
-        <a href="#">Shipping</a>
-        <a href="#">FAQ</a>
-        <a href="#">My Accounts</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Returns</a>
-      </div>
-      <div class="footer-links">
-        <a href="#">Gift Certificates</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
-      </div>
-      <div class="social">
-        <a href="#">Facebook</a>
-      </div>
+      <div class="icons">We check thousands <br />of prices to beat daily*</div>
     </div>
-  </footer>
+    
+    <div class="main-nav">
+      <a href="#">Dog <img src="images/icon_down.png" /></a>
+      <a href="#">Cat <img src="images/icon_down.png" /></a>
+      <a href="#">Other Pets <img src="images/icon_down.png" /></a>
+      <a href="#">Pharmacy <img src="images/icon_down.png" /></a>
+      <a href="#">Services <img src="images/icon_down.png" /></a>
+      <a href="#">Learn</a>
+      <a href="#">Deals</a>
+    </div>
+    <main class="checkout-top">
+      <div class="detail-nav">
+        <a href="homepage.html">Homepage</a>
+        <i class="ri-arrow-drop-right-line"></i>
+        <a href="javascript:;" style="color: #333">Search</a>
+      </div>
+      <div class="section-header">
+        <h2>Catalog</h2>
+      </div>
+    </main>
+    <div class="searchpage-container">
+      <!-- 左侧筛选栏 -->
+      <aside class="filter-sidebar">
+        <div class="filter-group">
+          <div class="filter-title">Pet type</div>
+          <label><span><input type="radio" name="pet" /> Dogs </span><span>178</span></label>
+          <label><span><input type="radio" name="pet" checked /> Cats </span><span>124</span></label>
+          <label><span><input type="radio" name="pet" /> Birds  </span><span>167</span></label>
+          <label><span><input type="radio" name="pet" /> Fish  </span><span>123</span></label>
+          <label><span><input type="radio" name="pet" /> Others </span><span>173</span></label>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">Product type</div>
+          <label> Food</label>
+          <div class="filter-subgroup">
+            <label><span><input type="checkbox" checked /> Dry food </span></label>
+            <label><span><input type="checkbox" /> Wet food </span></label>
+            <label><span><input type="checkbox" /> Treats </span></label>
+          </div>
+          <div class="filter-pnn-subgroup">
+            <label>Accessories </label>
+            <label>Cloth </label>
+            <label>ToyS </label>
+            <label>Fillers </label>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">Price</div>
+          <label><span><input type="radio" name="price" checked /> Under $50</span></label>
+          <label><span><input type="radio" name="price" /> $50 to $100</span></label>
+          <label><span><input type="radio" name="price" /> $100 to $150</label>
+          <label><span><input type="radio" name="price" /> $150 to $200</span></label>
+          <label><span><input type="radio" name="price" /> $200 and above</span></label>
+          <div class="filter-price-range">
+            <input type="number" placeholder="$" min="0" />
+            <span>to</span>
+            <input type="number" placeholder="$" min="0" />
+            <button>Apply</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="filter-title">Brand</div>
+          <label><span><input type="radio" name="brand" /> Royal Canin</span></label>
+          <label><span><input type="radio" name="brand" checked /> Pro Plan</span></label>
+          <label><span><input type="radio" name="brand" /> Friskies</span></label>
+          <label><span><input type="radio" name="brand" /> Zealandia</span></label>
+          <label><span><input type="radio" name="brand" /> Brit</span></label>
+          <label class="show-all">Show all</label>
+        </div>
+      </aside>
+      <!-- 右侧商品网格 -->
+      <section class="product-grid-section">
+        <div class="products-grid">
+          <!-- 产品卡片 -->
+          <div class="product-card">
+            <a href="detail.html">
+              <img src="images/img1.png" alt="" />
+              <div class="product-info">
+                <div class="stars">★★★★★ <span>4.9</span></div>
+                <div class="title">NatureBlend Grain-Free Canned Cat Food</div>
+                <div class="price">
+                  <span class="old">$199.00</span><span class="new">$19.00</span>
+                </div>
+                <button class="cart-btn">
+                  <i class="ri-shopping-cart-line"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="detail.html">
+              <img src="images/img3.png" alt="" />
+              <div class="product-info">
+                <div class="stars">★★★★★ <span>4.9</span></div>
+                <div class="title">PlayPaw Interactive Cat Teaser Toy</div>
+                <div class="price">
+                  <span class="old">$199.00</span><span class="new">$19.00</span>
+                </div>
+                <button class="cart-btn">
+                  <i class="ri-shopping-cart-line"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="detail.html">
+              <img src="images/img3.png" alt="" />
+              <div class="product-info">
+                <div class="stars">★★★★★ <span>4.9</span></div>
+                <div class="title">FreshMist Pet Odor Neutralizing Spray</div>
+                <div class="price">
+                  <span class="old">$199.00</span><span class="new">$19.00</span>
+                </div>
+                <button class="cart-btn">
+                  <i class="ri-shopping-cart-line"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="detail.html">
+              <img src="images/img4.png" alt="" />
+              <div class="product-info">
+                <div class="stars">★★★★★ <span>4.9</span></div>
+                <div class="title">PawPod Compact Cat Speaker</div>
+                <div class="price">
+                  <span class="old">$199.00</span><span class="new">$19.00</span>
+                </div>
+                <button class="cart-btn">
+                  <i class="ri-shopping-cart-line"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="pagination">
+          <span class="current">1</span>
+        </div>
+      </section>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-newsletter">
+          <div class="newsletter-left">
+            <div class="newsletter-title">Get the best deals!</div>
+            <div class="newsletter-desc">
+              Hear first about our exclusive offers and pet care advice.
+            </div>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Enter your email address" />
+              <button>Sign me up!</button>
+            </div>
+          </div>
+          <div class="newsletter-right">
+            <div>Our experts are available 24/7</div>
+            <div>Our phone number: 5632749173</div>
+            <div>Chat now</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-main">
+        <div class="footer-logo-nav">
+          <div class="footer-logo">
+            <img src="images/big_logo.png" alt="Logo" />
+          </div>
+          <div class="footer-nav">
+            <ul>
+              <li>Shipping</li>
+              <li>FAQ</li>
+              <li>My Accounts</li>
+              <li>Terms & Conditions</li>
+              <li>Returns</li>
+            </ul>
+
+            <div class="footer-links">
+              <ul>
+                <li>Gift Certificates</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+              </ul>
+              <div class="footer-social">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png"
+                  alt="Facebook"
+                />
+                <img src="images/verified-seal.png" alt="Facebook" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        Copyright © Pets Megastore. Site developed by Technology Matters
+      </div>
+    </footer>
+  </body>
 </html>
