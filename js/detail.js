@@ -84,6 +84,7 @@ class ProductDetail {
     
     initAddToCart() {
         const addToCartBtn = document.querySelector('.add-to-cart');
+        const addToCartTxt = document.querySelector('#icon-cart-menu span');
         if (addToCartBtn) {
             addToCartBtn.addEventListener('click', () => {
                 // 检查是否所有规格都已选择
@@ -91,6 +92,8 @@ class ProductDetail {
                 
                 if (allSelected) {
                     // 这里添加加入购物车的逻辑
+                    addToCartTxt.innerHTML = 1
+                    addToCartTxt.style.display = 'block'
                     console.log('加入购物车', {
                         options: this.selectedOptions,
                         quantity: this.quantity

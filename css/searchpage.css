@@ -1,178 +1,370 @@
 .checkout-top {
-    padding: 0 16px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .checkout-top .section-header {
-    justify-content: start;
-  }
-  .section-header img {
-    width: 35px;
-    margin-left: -10px;
-    margin-top: 6px;
-  }
+  padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.checkout-top .section-header {
+  justify-content: start;
+}
+.section-header img {
+  width: 35px;
+  margin-left: -10px;
+  margin-top: 6px;
+}
+.searchpage-container {
+  display: flex;
+  gap: 32px;
+  padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+.filter-sidebar {
+  width: 240px;
+  background: none;
+  font-size: 16px;
+  color: #3a2d1a;
+  flex-shrink: 0;
+}
+.filter-pnn-subgroup label{
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+}
+.filter-group {
+  margin-bottom: 28px;
+}
+.filter-title {
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-size: 1.28rem;
+}
+.filter-pnn-subgroup img{
+  width: 6px;
+  height: 6px;
+}
+.filter-group label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-size: 1.08rem;
+}
+.products-grid{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.product-card img{
+  height: 170px;
+}
+.filter-group label input[type="radio"],
+.filter-group label input[type="checkbox"] {
+  margin-right: 6px;
+  margin-top: 0;
+}
+.filter-group span {
+  color: #333333;
+  font-size: 1.05rem;
+  margin-left: 2px;
+}
+.filter-subgroup {
+  margin-bottom: 6px;
+}
+.filter-price-range {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+.filter-price-range input[type="number"] {
+  width: 48px;
+  padding: 2px 4px;
+  border: 1px solid #e0d3b8;
+  border-radius: 4px;
+  background: #fff8ee;
+}
+.filter-price-range button {
+  padding: 2px 10px;
+  background: #6b4f2a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.show-all {
+  color: #a08c6d;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+.product-grid-section {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px 18px;
+  width: 100%;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 124px;
+}
+.pagination .current {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: #fffbe9;
+  color: #6b4f2a;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.filter-sidebar-menu{
+  display: none;
+}
+/* 弹窗遮罩 */
+.filter-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; right: 0; bottom: 0;
+}
+.filter-popup-mask {
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+}
+.filter-popup-content {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  padding: 18px 16px 24px 16px;
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--main-bg);
+  animation: popupIn 0.25s;
+}
+@keyframes popupIn {
+  from { transform: translateY(100%);}
+  to { transform: translateY(0);}
+}
+.filter-popup-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.filter-popup-close {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #bfa16a;
+  cursor: pointer;
+  line-height: 1;
+}
+/* 响应式适配 */
+@media (max-width: 912px) {
   .searchpage-container {
-    display: flex;
-    gap: 32px;
-    padding: 0 16px;
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 80vh;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 2vw 24px 2vw;
   }
   .filter-sidebar {
-    width: 240px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 18px;
     background: none;
-    font-size: 16px;
-    color: #3a2d1a;
-    flex-shrink: 0;
-  }
-  .filter-pnn-subgroup label{
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 14px;
-    margin-bottom: 14px;
+    border: none;
+    font-size: 15px;
   }
   .filter-group {
-    margin-bottom: 28px;
-  }
-  .filter-title {
-    font-weight: 700;
-    margin-bottom: 18px;
-    font-size: 1.28rem;
-  }
-  .filter-group label {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    cursor: pointer;
-    font-size: 1.08rem;
-  }
-  .products-grid{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  .product-card img{
-    height: 170px;
-  }
-  .filter-group label input[type="radio"],
-  .filter-group label input[type="checkbox"] {
-    margin-right: 6px;
-  }
-  .filter-group span {
-    color: #333333;
-    font-size: 1.05rem;
-    margin-left: 2px;
-  }
-  .filter-subgroup {
-    margin-bottom: 6px;
-  }
-  .filter-price-range {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 6px;
-  }
-  .filter-price-range input[type="number"] {
-    width: 48px;
-    padding: 2px 4px;
-    border: 1px solid #e0d3b8;
-    border-radius: 4px;
-    background: #fff8ee;
-  }
-  .filter-price-range button {
-    padding: 2px 10px;
-    background: #6b4f2a;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    cursor: pointer;
-  }
-  .show-all {
-    color: #a08c6d;
-    cursor: pointer;
-    font-size: 0.95rem;
-    margin-top: 4px;
+    min-width: 140px;
+    margin-bottom: 12px;
   }
   .product-grid-section {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 100%;
   }
   .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 18px 18px;
-    width: 100%;
+    gap: 12px 12px;
+    grid-template-columns: 1fr 1fr;
   }
-  
-  .pagination {
-    width: 100%;
+}
+ 
+@media (max-width: 600px) {
+  .searchpage-container {
+    padding: 4px 0 12px 0;
+  }
+  .filter-sidebar-menu{
     display: flex;
-    justify-content: center;
-    margin-top: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 12px 20px 12px;
   }
-  .pagination .current {
-    display: inline-block;
-    width: 28px;
-    height: 28px;
-    background: #fffbe9;
-    color: #6b4f2a;
-    border-radius: 50%;
+  .filter-sidebar-menu span{
+    padding: 7px 10px;
+    border-radius: 8px;
+    background-color: #fbf9ea;
     text-align: center;
-    line-height: 28px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 14px;
+    width: 15%;
+    margin-right: 10px;
   }
-  
-  /* 响应式适配 */
-  @media (max-width: 900px) {
-    .searchpage-container {
-      flex-direction: column;
-      gap: 0;
-      padding: 12px 2vw 24px 2vw;
-    }
-    .filter-sidebar {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-bottom: 18px;
-      background: none;
-      border: none;
-      font-size: 15px;
-    }
-    .filter-group {
-      min-width: 140px;
-      margin-bottom: 12px;
-    }
-    .product-grid-section {
-      width: 100%;
-    }
-    .product-grid {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 12px 12px;
-    }
+  .filter-sidebar-menu span.active{
+    background-color: #6b4f2a;
   }
-  @media (max-width: 600px) {
-    .searchpage-container {
-      padding: 4px 0 12px 0;
-    }
-    .filter-sidebar {
-      flex-direction: column;
-      gap: 0;
-      font-size: 14px;
-    }
-    .product-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px 8px;
-    }
-    .product-card img {
-      height: 80px;
-    }
-    .pagination {
-      margin-top: 12px;
-    }
+  .products-grid{
+    grid-template-columns:  1fr 1fr;
   }
+  .filter-sidebar {
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    font-size: 14px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 8px;
+  }
+  .product-card img {
+    height: 80px;
+  }
+  .pagination {
+    margin-top: 12px;
+  }
+  .filter-sidebar-menu{
+    display: flex;
+    align-items: center;
+    padding: 0 12px 20px 12px;
+  }
+  .filter-sidebar-menu span{
+    padding: 7px 10px;
+    border-radius: 8px;
+    background-color: #fbf9ea;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .filter-sidebar-menu span.active{
+    background-color: #6b4f2a;
+    color: #fff;
+  }
+  .filter-sidebar {
+    display: none !important;
+  }
+  .filter-popup {
+    display: block;
+  }
+  #filterSidebarContainer{
+    padding-bottom: 60px;
+  }
+  .filter-popup-bottom{
+    position: fixed;
+    z-index: 11;
+    left: 20px;
+    bottom: 10px;
+    right: 20px;
+  }
+  .filter-popup-bottom button{
+    background-color: #6b4f2a;
+    color: #fff;
+    width: 100%;
+    font-size: 19px;
+    line-height: 40px;
+    border-radius: 20px;
+  }
+}
+
+/* 统一美化单选框和多选框 */
+.filter-group input[type="radio"],
+.filter-group input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #bfa16a;
+  border-radius: 50%;
+  background: #fff;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  display: inline-block;
+}
+
+/* 多选框为方形 */
+.filter-group input[type="checkbox"] {
+  border-radius: 6px;
+}
+
+/* 选中时显示√ */
+.filter-group input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 14px;
+  height: 14px;
+  background: #6b4f2a;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 选中时背景色 */
+.filter-group input[type="checkbox"]:checked {
+  background: #6b4f2a;
+  border-color: #6b4f2a;
+  margin-top: 0;
+}
+
+/* 单选框选中时显示圆圈内√ */
+.filter-group input[type="radio"]:checked::after {
+  content: "✔";
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 14px;
+  height: 14px;
+  background: #6b4f2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 单选框选中时背景色 */
+.filter-group input[type="radio"]:checked {
+  background: #6b4f2a;
+  border-color: #6b4f2a;
+}

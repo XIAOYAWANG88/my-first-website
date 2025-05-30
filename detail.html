@@ -21,7 +21,11 @@
                 Deliver to Sydney, 2000</span>
             <img src="images/icon_user.png" alt="">
             <img src="images/icon_menu.png" alt="">
-            <img src="images/icon_cart.png" id="icon-cart-menu">
+            <div id="icon-cart-menu">
+                <img src="images/icon_cart.png">
+                <span class="num" style="display: none;"></span>
+            </div>
+            
             <!-- 购物车弹窗 -->
             <div id="cart-popup" class="cart-popup" style="display: none;">
                 <div class="cart-popup-title">Added to cart!</div>
@@ -37,7 +41,9 @@
                     </div>
                 </div>
                 </div>
-                <button class="cart-popup-btn">Go to cart</button>
+                <a href="shoppingcart.html">
+                  <button class="cart-popup-btn">Go to cart</button>
+                </a>
             </div>
         </div>
       </div>
@@ -181,7 +187,7 @@
                         <span>52kg</span>
                     </div>
                 </div>
-                <div class="product-size">
+                <!-- <div class="product-size">
                     <div class="size-name">Size</div>
                     <div class="size-list">
                         <span>Small</span>
@@ -189,7 +195,7 @@
                         <span>Large</span>
                         <span>X-Large</span>
                     </div>
-                </div>
+                </div> -->
                 <div class="quantity-selector">
                     <button class="quantity-btn quantity-btn-remove">-</button>
                     <span class="quantity-input">1</span>
@@ -207,16 +213,118 @@
                 <span class="active">Characteristic</span>
                 <span>Compound</span>
                 <span>Advantages</span>
-                <span>Nutrition</span>
-                <span>Specification</span>
                 <span>Safety Notes</span>
-                <span><Revies（149）/span>
             </div>
             <div class="tab-panne">
                 <img src="images/content.png" style="width: 100%;">
             </div>
         </div>
-        
+        <div class="customer-reviews-section">
+            <div class="reviews-header">
+              <div class="review-product-img">
+                <img src="images/img1.png" alt="Product" />
+              </div>
+              <div class="review-summary">
+                <div class="review-stars">
+                  <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star half"></span>
+                  <span class="review-score">Overall Rating <b>(30)</b></span>
+                </div>
+                <div class="review-bars">
+                  <div class="review-bar-row">
+                    <span class="bar-stars">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star half"></span>
+                    </span>
+                    <div class="bar-bg">
+                      <div class="bar-fill" style="width: 70%"></div>
+                    </div>
+                    <span class="bar-count">(20)</span>
+                  </div>
+                  <div class="review-bar-row">
+                    <span class="bar-stars">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star half"></span>
+                    </span>
+                    <div class="bar-bg">
+                      <div class="bar-fill" style="width: 10%"></div>
+                    </div>
+                    <span class="bar-count">(3)</span>
+                  </div>
+                  <div class="review-bar-row">
+                    <span class="bar-stars">
+                        <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star half"></span>
+                    </span>
+                    <div class="bar-bg">
+                      <div class="bar-fill" style="width: 13%"></div>
+                    </div>
+                    <span class="bar-count">(4)</span>
+                  </div>
+                  <div class="review-bar-row">
+                    <span class="bar-stars">
+                        <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star half"></span>
+                    </span>
+                    <div class="bar-bg">
+                      <div class="bar-fill" style="width: 7%"></div>
+                    </div>
+                    <span class="bar-count">(2)</span>
+                  </div>
+                  <div class="review-bar-row">
+                    <span class="bar-stars">
+                        <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star full"></span>
+                  <span class="star half"></span>
+                    </span>
+                    <div class="bar-bg">
+                      <div class="bar-fill" style="width: 3%"></div>
+                    </div>
+                    <span class="bar-count">(1)</span>
+                  </div>
+                  <div class="review-bar-row">
+                    <span class="bar-stars">
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star full"></span>
+                        <span class="star half"></span>
+                    </span>
+                    <div class="bar-bg">
+                      <div class="bar-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="bar-count">(0)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-latest">
+              <div class="reviews-latest-title">Latest user reviews</div>
+              <div class="reviews-latest-meta">13/01/24 / Sandra</div>
+              <div class="reviews-latest-content">
+                Yummy and health – my cats love it<br>
+                My cats did not like wet food before Almo Nature. My cats love it now, they look forward to their wet food. You can see the chunks of meat and fish. It is very natural and health. Very happy with almo nature.
+              </div>
+              <div class="reviews-latest-more">More <span class="arrow">&#9660;</span></div>
+            </div>
+          </div>
     </main>
     <main class="product-container">
         <div class="product-list">
@@ -393,5 +501,6 @@
       </footer>
     <script src="js/detail.js"></script>
     <script src="js/common.js"></script>
+   
 </body>
 </html>
