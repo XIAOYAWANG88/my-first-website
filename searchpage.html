@@ -105,12 +105,14 @@
       </div>
     </main>
     <div class="searchpage-container">
-      <aside class="filter-sidebar-menu">
-        <span>Selections</span>
+      <div class="filter-sidebar-menu">
+        <span>selection</span>
         <span>News</span>
         <span>Limited</span>
         <span>Discount</span>
-      </aside>
+       
+        <span id="openFilterPopup" style="width: 100%;margin-top: 10px;">filter</span>
+      </div>
       <!-- 左侧筛选栏 -->
       <aside class="filter-sidebar">
         <div class="filter-group">
@@ -130,10 +132,10 @@
             <label><span><input type="checkbox" /> Treats </span></label>
           </div>
           <div class="filter-pnn-subgroup">
-            <label>Accessories </label>
-            <label>Cloth </label>
-            <label>ToyS </label>
-            <label>Fillers </label>
+            <label>Accessories <img src="images/Polygon.png" alt=""></label>
+            <label>Cloth <img src="images/Polygon.png" alt=""></label>
+            <label>ToyS <img src="images/Polygon.png" alt=""></label>
+            <label>Fillers <img src="images/Polygon.png" alt=""></label>
           </div>
         </div>
         <div class="filter-group">
@@ -195,7 +197,7 @@
             </a>
           </div>
           <div class="product-card">
-            <a href="detail.html">
+            <!-- <a href="detail.html"> -->
               <img src="images/img3.png" alt="" />
               <div class="product-info">
                 <div class="stars">★★★★★ <span>4.9</span></div>
@@ -207,10 +209,10 @@
                   <i class="ri-shopping-cart-line"></i>
                 </button>
               </div>
-            </a>
+            <!-- </a> -->
           </div>
           <div class="product-card">
-            <a href="detail.html">
+            <!-- <a href="detail.html"> -->
               <img src="images/img4.png" alt="" />
               <div class="product-info">
                 <div class="stars">★★★★★ <span>4.9</span></div>
@@ -222,7 +224,67 @@
                   <i class="ri-shopping-cart-line"></i>
                 </button>
               </div>
-            </a>
+            <!-- </a> -->
+          </div>
+          <div class="product-card">
+            <!-- <a href="detail.html"> -->
+              <img src="images/img1.png" alt="" />
+              <div class="product-info">
+                <div class="stars">★★★★★ <span>4.9</span></div>
+                <div class="title">NatureBlend Grain-Free Canned Cat Food</div>
+                <div class="price">
+                  <span class="old">$199.00</span><span class="new">$19.00</span>
+                </div>
+                <button class="cart-btn">
+                  <i class="ri-shopping-cart-line"></i>
+                </button>
+              </div>
+            <!-- </a> -->
+          </div>
+          <div class="product-card">
+            <!-- <a href="detail.html"> -->
+              <img src="images/img3.png" alt="" />
+              <div class="product-info">
+                <div class="stars">★★★★★ <span>4.9</span></div>
+                <div class="title">PlayPaw Interactive Cat Teaser Toy</div>
+                <div class="price">
+                  <span class="old">$199.00</span><span class="new">$19.00</span>
+                </div>
+                <button class="cart-btn">
+                  <i class="ri-shopping-cart-line"></i>
+                </button>
+              </div>
+            <!-- </a> -->
+          </div>
+          <div class="product-card">
+            <!-- <a href="detail.html"> -->
+              <img src="images/img3.png" alt="" />
+              <div class="product-info">
+                <div class="stars">★★★★★ <span>4.9</span></div>
+                <div class="title">FreshMist Pet Odor Neutralizing Spray</div>
+                <div class="price">
+                  <span class="old">$199.00</span><span class="new">$19.00</span>
+                </div>
+                <button class="cart-btn">
+                  <i class="ri-shopping-cart-line"></i>
+                </button>
+              </div>
+            <!-- </a> -->
+          </div>
+          <div class="product-card">
+            <!-- <a href="detail.html"> -->
+              <img src="images/img4.png" alt="" />
+              <div class="product-info">
+                <div class="stars">★★★★★ <span>4.9</span></div>
+                <div class="title">PawPod Compact Cat Speaker</div>
+                <div class="price">
+                  <span class="old">$199.00</span><span class="new">$19.00</span>
+                </div>
+                <button class="cart-btn">
+                  <i class="ri-shopping-cart-line"></i>
+                </button>
+              </div>
+            <!-- </a> -->
           </div>
         </div>
         <div class="pagination">
@@ -287,6 +349,70 @@
         Copyright © Pets Megastore. Site developed by Technology Matters
       </div>
     </footer>
+    <!-- 移动端筛选弹窗 -->
+    <div class="filter-popup" id="filterPopup" style="display: none;">
+      <div class="filter-popup-mask" id="filterPopupMask"></div>
+      <div class="filter-popup-content">
+        <div class="filter-popup-header">
+          <span>All Filters</span>
+          <button class="filter-popup-close" id="filterPopupClose">&times;</button>
+        </div>
+        <!-- 这里嵌入原有的filter-sidebar内容 -->
+        <div id="filterSidebarContainer">
+          <div class="filter-group">
+            <div class="filter-title">Pet type</div>
+            <label><span><input type="radio" name="pet" /> Dogs </span><span>178</span></label>
+            <label><span><input type="radio" name="pet" checked /> Cats </span><span>124</span></label>
+            <label><span><input type="radio" name="pet" /> Birds  </span><span>167</span></label>
+            <label><span><input type="radio" name="pet" /> Fish  </span><span>123</span></label>
+            <label><span><input type="radio" name="pet" /> Others </span><span>173</span></label>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">Product type</div>
+            <label> Food</label>
+            <div class="filter-subgroup">
+              <label><span><input type="checkbox" checked /> Dry food </span></label>
+              <label><span><input type="checkbox" /> Wet food </span></label>
+              <label><span><input type="checkbox" /> Treats </span></label>
+            </div>
+            <div class="filter-pnn-subgroup">
+              <label>Accessories </label>
+              <label>Cloth </label>
+              <label>ToyS </label>
+              <label>Fillers </label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">Price</div>
+            <label><span><input type="radio" name="price" checked /> Under $50</span></label>
+            <label><span><input type="radio" name="price" /> $50 to $100</span></label>
+            <label><span><input type="radio" name="price" /> $100 to $150</label>
+            <label><span><input type="radio" name="price" /> $150 to $200</span></label>
+            <label><span><input type="radio" name="price" /> $200 and above</span></label>
+            <div class="filter-price-range">
+              <input type="number" placeholder="$" min="0" />
+              <span>to</span>
+              <input type="number" placeholder="$" min="0" />
+              <button>Apply</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">Brand</div>
+            <label><span><input type="radio" name="brand" /> Royal Canin</span></label>
+            <label><span><input type="radio" name="brand" checked /> Pro Plan</span></label>
+            <label><span><input type="radio" name="brand" /> Friskies</span></label>
+            <label><span><input type="radio" name="brand" /> Zealandia</span></label>
+            <label><span><input type="radio" name="brand" /> Brit</span></label>
+            <label class="show-all">Show all</label>
+          </div>
+        </div>
+        <div class="filter-popup-bottom">
+          <button id="show-result">show result</button>
+        </div>
+      </div>
+    </div>
     <script src="js/common.js"></script>
+    <script src="js/searchpage.js"></script>
+    
   </body>
 </html>

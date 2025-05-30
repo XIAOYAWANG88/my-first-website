@@ -3,27 +3,31 @@
   padding: 32px 0 24px 0;
   margin: 0;
 }
-.popular-products{
+.popular-products {
   background: #f7ecd7;
   padding: 32px 0 24px 0;
   margin: 0;
 }
-.popular-products .product-card{
+.popular-products .product-card {
   background-color: transparent;
   box-shadow: none;
   border-radius: 0;
 }
-.popular-products .product-info{
-  padding-left: 0;
-  padding-bottom:0;
+.popular-products .product-card:hover{
+  border: 0;
+  box-shadow: none;
 }
-.popular-products .product-info .title{
+.popular-products .product-info {
+  padding-left: 0;
+  padding-bottom: 0;
+}
+.popular-products .product-info .title {
   font-size: 1.2em;
   margin-top: 8px;
   min-height: auto;
-  margin-bottom:0;
+  margin-bottom: 0;
 }
-.popular-products .product-card img{
+.popular-products .product-card img {
   border-radius: 16px;
   height: 240px;
 }
@@ -58,9 +62,10 @@
   width: 100%;
 }
 .product-card {
-  background: #FBF9EA;
+  background: #fbf9ea;
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -99,6 +104,11 @@
   font-weight: 500;
   min-height: 2.5em;
   margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .price {
   color: #ff6600;
@@ -136,11 +146,12 @@
 }
 
 /* 响应式 */
-@media (max-width: 900px) {
+@media (max-width: 912px) {
   .products-grid {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    margin: 0 8px;
+    padding: 0 8px;
+    box-sizing: border-box;
   }
   .section-header {
     margin: 0 8px 12px 8px;
@@ -148,10 +159,23 @@
 }
 @media (max-width: 600px) {
   .products-grid {
-   
     gap: 12px;
+  }
+  .section-header {
+    margin: 15px 0;
+  }
+  .cart-btn{
+    position: inherit;
   }
   .section-header h2 {
     font-size: 1.2em;
   }
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  transform: translateY(-6px) scale(1.03);
+  border: 2px solid #ff9900;
+  z-index: 2;
+  transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
 }
