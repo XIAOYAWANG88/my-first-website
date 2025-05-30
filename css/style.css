@@ -35,6 +35,7 @@ body {
 .top-bar .icon-box img {
   width: 25px;
   height: 25px;
+  cursor: pointer;
   margin: 0 14px;
 }
 .top-bar .icon-box span {
