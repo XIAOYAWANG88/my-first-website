@@ -75,7 +75,7 @@ class ProductDetail {
         
         if (quantityInput && minusBtn && plusBtn) {
             quantityInput.textContent = this.quantity;
-            
+           
             // 更新按钮状态
             minusBtn.disabled = this.quantity <= this.minQuantity;
             plusBtn.disabled = this.quantity >= this.maxQuantity;
@@ -83,8 +83,10 @@ class ProductDetail {
     }
     
     initAddToCart() {
+        const quantityInput = document.querySelector('.quantity-input');
         const addToCartBtn = document.querySelector('.add-to-cart');
         const addToCartTxt = document.querySelector('#icon-cart-menu span');
+        const cartPopup = document.getElementById('cart-popup');
         if (addToCartBtn) {
             addToCartBtn.addEventListener('click', () => {
                 // 检查是否所有规格都已选择
@@ -92,8 +94,30 @@ class ProductDetail {
                 
                 if (allSelected) {
                     // 这里添加加入购物车的逻辑
-                    addToCartTxt.innerHTML = 1
+                   
                     addToCartTxt.style.display = 'block'
+                    cartPopup.style.display = 'block';
+                    addToCartBtn.style.background = '#df0e0e'
+
+                    let carts = sessionStorage.getItem('cart')
+                    carts = carts ? JSON.parse(carts) : []
+                    if (window.location.pathname.includes('detail.html')) {
+                       const index = carts.findIndex(item => item.id == 1)
+                       if (index > -1) {
+                        carts.splice(index, 1, {id: 1, quantity: quantityInput.textContent})
+                       } else {
+                        carts.push({id: 1, quantity: quantityInput.textContent})
+                       }
+                    } else if (window.location.pathname.includes('detail2.html')){
+                        const index = carts.findIndex(item => item.id == 2)
+                        if (index > -1) {
+                         carts.splice(index, 1, {id: 2, quantity: quantityInput.textContent})
+                        } else {
+                        carts.push({id: 1, quantity: quantityInput.textContent})
+                        }
+                    }
+                    addToCartTxt.innerHTML = carts.length
+                    sessionStorage.setItem('cart',JSON.stringify(carts))
                     console.log('加入购物车', {
                         options: this.selectedOptions,
                         quantity: this.quantity

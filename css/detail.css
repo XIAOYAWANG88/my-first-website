@@ -23,15 +23,7 @@
   background: transparent;
   position: relative;
 }
-#icon-cart-menu{
-  position: relative;
-}
-#icon-cart-menu span{
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 16px;
-}
+
 .product-container {
   background: var(--main-search);
 }

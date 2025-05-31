@@ -28,7 +28,33 @@
         >
         <img src="images/icon_user.png" alt="" />
         <img src="images/icon_menu.png" alt="" />
-        <img src="images/icon_cart.png" alt="" />
+        <div id="icon-cart-menu">
+            <img src="images/icon_cart.png">
+            <span class="num" style="display: none;"></span>
+        </div>
+        <!-- 购物车弹窗 -->
+        <div id="cart-popup" class="cart-popup" style="display: none;">
+          <div class="cart-popup-title">Added to cart!</div>
+          <div class="cart-popup-content">
+            <!-- <img src="images/img1.png" alt="商品图片" class="cart-popup-img">
+            <div class="cart-popup-info">
+                <div class="cart-popup-name">Dry Cat Food</div>
+                <div class="cart-popup-price">$199.00</div>
+                <div class="cart-popup-qty">
+                <div class="quantity-selector" style="display:flex; align-items:center; gap:12px;">
+                  <button class="quantity-btn quantity-btn-remove1">-</button>
+                  <span >1</span>
+                  <input type="number" value="1" min="1" class="quantity-input">
+                  <button class="quantity-btn quantity-btn-add1" style="background-color: #54361A;color: #fff;">+</button>
+                </div>
+              
+                </div>
+            </div> -->
+          </div>
+          <a href="shoppingcart.html">
+            <button class="cart-popup-btn">Go to cart</button>
+          </a>
+      </div>
       </div>
     </div>
     <div class="main-header">
@@ -41,16 +67,16 @@
         <div class="search-dropdown" id="searchDropdown">
           <div class="search-dropdown-left">
             <ul>
-              <li><a href="searchpage.html">cat</a></li>
-              <li><a href="searchpage.html">cat toys</a></li>
-              <li><a href="searchpage.html">cat bag</a></li>
-              <li><a href="searchpage.html">cat litter</a></li>
-              <li><a href="searchpage.html">cat tree</a></li>
-              <li><a href="searchpage.html">cat grooming</a></li>
+              <li><a href="javascript:;">cat</a></li>
+              <li><a href="javascript:;">cat toys</a></li>
+              <li><a href="javascript:;">cat bag</a></li>
+              <li><a href="javascript:;">cat litter</a></li>
+              <li><a href="javascript:;">cat tree</a></li>
+              <li><a href="javascript:;">cat grooming</a></li>
               <li><a href="searchpage.html">cat food</a></li>
-              <li><a href="searchpage.html">cat clothes</a></li>
-              <li><a href="searchpage.html">cat treats</a></li>
-              <li><a href="searchpage.html">cat bed</a></li>
+              <li><a href="javascript:;">cat clothes</a></li>
+              <li><a href="javascript:;">cat treats</a></li>
+              <li><a href="javascript:;">cat bed</a></li>
             </ul>
           </div>
           <div class="search-dropdown-right">
@@ -68,7 +94,7 @@
                 </a>
               </div>
               <div class="suggest-product-card">
-                <a href="detail.html">
+                <a href="detail2.html">
                   <img src="images/img3.png" alt="" />
                   <div class="suggest-info">
                     <div class="stars">★★★★★ <span>4.9</span></div>
@@ -171,26 +197,26 @@
               <img src="images/img1.png" alt="" />
               <div class="product-info">
                 <div class="stars">★★★★★ <span>4.9</span></div>
-                <div class="title">NatureBlend Grain-Free Canned Cat Food</div>
+                <div class="title">Dry Cat Food</div>
                 <div class="price">
                   <span class="old">$199.00</span><span class="new">$19.00</span>
                 </div>
-                <button class="cart-btn">
+                <button class="cart-btn" id="cart1">
                   <i class="ri-shopping-cart-line"></i>
                 </button>
               </div>
             </a>
           </div>
           <div class="product-card">
-            <a href="detail.html">
+            <a href="detail2.html">
               <img src="images/img3.png" alt="" />
               <div class="product-info">
                 <div class="stars">★★★★★ <span>4.9</span></div>
-                <div class="title">PlayPaw Interactive Cat Teaser Toy</div>
+                <div class="title">Stage Cat Food</div>
                 <div class="price">
                   <span class="old">$199.00</span><span class="new">$19.00</span>
                 </div>
-                <button class="cart-btn">
+                <button class="cart-btn" id="cart2">
                   <i class="ri-shopping-cart-line"></i>
                 </button>
               </div>
@@ -416,3 +442,4 @@
     
   </body>
 </html>
+
