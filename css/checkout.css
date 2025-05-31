@@ -188,7 +188,7 @@
 /* 响应式适配 */
 @media (max-width: 912px) {
   .checkout-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 12px;
   }
  
