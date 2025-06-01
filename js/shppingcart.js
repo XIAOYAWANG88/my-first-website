@@ -13,7 +13,7 @@ let cartDatas = [
     name: "Stage Cat Food",
     desc: "Special Price",
     price: 99.00,
-    img: "images/img2.png",
+    img: "images/detail2.webp",
     qty: 1
   }
 ];

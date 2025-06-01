@@ -20,24 +20,34 @@ const cartIcon = document.querySelector('#icon-cart-menu');
 const cartPopup = document.getElementById('cart-popup');
 
 // 购物车图标和弹窗的显示/隐藏
-cartIcon && cartIcon.addEventListener('mouseenter', function() {
-  cartPopup.style.display = 'block';
-  renderCart()
+// cartIcon && cartIcon.addEventListener('mouseenter', function() {
+//   cartPopup.style.display = 'block';
+//   renderCart()
+// });
+cartIcon && cartIcon.addEventListener('click', function() {
+
+  if (cartPopup.style.display == 'block') {
+    cartPopup.style.display = 'none';
+  } else {
+    cartPopup.style.display = 'block';
+    renderCart()
+  }
+ 
 });
-cartIcon && cartIcon.addEventListener('mouseleave', function() {
-  setTimeout(() => {
-    if (!cartPopup.matches(':hover')) {
-      cartPopup.style.display = 'none';
-    }
-  }, 200);
-});
-cartPopup && cartPopup.addEventListener('mouseleave', function() {
-  cartPopup.style.display = 'none';
-});
-cartPopup && cartPopup.addEventListener('mouseenter', function() {
-  cartPopup.style.display = 'block';
-  renderCart()
-});
+// cartIcon && cartIcon.addEventListener('mouseleave', function() {
+//   setTimeout(() => {
+//     if (!cartPopup.matches(':hover')) {
+//       cartPopup.style.display = 'none';
+//     }
+//   }, 200);
+// });
+// cartPopup && cartPopup.addEventListener('mouseleave', function() {
+//   cartPopup.style.display = 'none';
+// });
+// cartPopup && cartPopup.addEventListener('mouseenter', function() {
+//   cartPopup.style.display = 'block';
+//   renderCart()
+// });
 
 // 模拟购物车数据
 let cartData = [
@@ -54,7 +64,7 @@ let cartData = [
     name: "Stage Cat Food",
     desc: "Special Price",
     price: 99.00,
-    img: "images/img2.png",
+    img: "images/detail2.webp",
     qty: 1
   }
 ];

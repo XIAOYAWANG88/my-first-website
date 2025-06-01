@@ -294,9 +294,9 @@
     padding: 6px 10px;
     font-size: 13px;
   }
-  .detail-body .tab-header {
+  /* .detail-body .tab-header {
     display: none;
-  }
+  } */
 }
 
 @media screen and (max-width: 600px) {
@@ -327,13 +327,20 @@
     display: block;
   }
   .detail-body .tab-header {
-    display: none;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  .detail-body .tab-header span{
+    margin-right: 5px;
+    padding: 6px 8px;
+    font-size: 14px;
   }
   .main-image {
     height: 260px;
   }
   .thumbnail-list{
-    display: none;
+    justify-content: center;
   }
   .product-sizes{
     padding: 9px 10px;
