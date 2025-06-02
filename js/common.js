@@ -13,7 +13,7 @@ searchInput.addEventListener('input', (e) => {
 searchInput.addEventListener('blur', () => {
   setTimeout(() => { // 延迟隐藏，避免点击下拉内容时立刻消失
     searchDropdown.style.display = 'none';
-  }, 150);
+  }, 250);
 });
 // 获取购物车图标和弹窗
 const cartIcon = document.querySelector('#icon-cart-menu');
@@ -83,8 +83,10 @@ function renderCart() {
 
   cartData.forEach((item, idx) => {
     const index = carts.findIndex(x => x.id == item.id)
+ 
     if (index === -1) return
     const cartItem = document.createElement('div');
+    console.log(item)
     // cartItem.className = 'suggest-product-card';
     cartItem.innerHTML = `
       <img src="${item.img}" alt="商品图片" class="cart-popup-img">
@@ -94,7 +96,7 @@ function renderCart() {
           <div class="cart-popup-qty">
           <div class="quantity-selector" style="display:flex; align-items:center; gap:12px;">
             <button class="quantity-btn quantity-btn-remove1" data-idx="${idx}">-</button>
-            <span >${carts[index].quantity}</span>
+            <i >${item.qty}</i>
             <!-- <input type="number" value="1" min="1" class="quantity-input"> -->
             <button class="quantity-btn quantity-btn-add1" data-idx="${idx}" style="background-color: #54361A;color: #fff;">+</button>
           </div>

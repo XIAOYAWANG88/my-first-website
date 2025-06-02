@@ -226,10 +226,10 @@
     padding: 16px 8px;
     gap: 10px;
   }
-  .cart-item-img {
+  /* .cart-item-img {
     width: 60px;
     height: 60px;
-  }
+  } */
   .products-list {
     max-height: none;
     overflow-y: visible;
@@ -262,6 +262,11 @@
   }
   .mobile{
     display: block;
+  }
+  .cart-item-total{
+    margin-left:auto;
+    margin-right:10px;
+    text-align:right;
   }
   .pc{
     display: none;

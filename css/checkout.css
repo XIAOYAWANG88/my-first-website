@@ -219,6 +219,7 @@
   .checkout-summary {
     padding: 12px;
     width: 100%;
+    top: 0;
     margin-top: 0;
     box-sizing: border-box;
   }
@@ -227,3 +228,4 @@
     gap: 8px;
   }
 }
+

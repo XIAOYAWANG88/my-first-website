@@ -253,7 +253,7 @@
 }
 
 /* 响应式布局 */
-@media screen and (max-width: 1368px) {
+@media screen and (max-width: 1370px) {
   .detail-container {
     padding: 16px;
   }

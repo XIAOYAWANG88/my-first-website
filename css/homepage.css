@@ -118,7 +118,7 @@ background: white;
   height: 80px;
 }
 /* 响应式布局 */
-@media screen and (max-width: 1368px) {
+@media screen and (max-width:1370px) {
 .banner-container {
   height: 350px;
 }
@@ -137,11 +137,15 @@ background: white;
 }
 
 @media screen and (max-width: 600px) {
+  
 .banner-container {
   height: 200px;
 }
 .popular-products,.recommended-products{
-  padding-top: 14px;
+  padding-top: 0px;
+}
+.section-header{
+  padding:0 10px;
 }
 .characteristic-type{
   padding: 14px 0;

@@ -17,6 +17,8 @@ body {
   min-width: 320px;
 }
 .top-bar {
+  height:60px;
+  box-sizing: border-box;
   background: var(--main-brown);
   color: var(--text-light);
   font-size: 14px;
@@ -265,6 +267,8 @@ body {
 }
 .search-dropdown-left li a{
   color: #3a2d1a;
+  display: block;
+  width: 100%;
 }
 .search-dropdown-left li:last-child {
   border-bottom: none;
@@ -580,6 +584,7 @@ a{
 }
 .cart-popup-info {
   flex: 1;
+  text-align: left;
 }
 .cart-popup-name {
   font-weight: bold;
@@ -604,7 +609,7 @@ a{
   cursor: pointer;
 }
 /* 响应式布局 */
-@media screen and (max-width: 1368px) {
+@media screen and (max-width: 1370px) {
   .main-header {
     padding: 8px 16px;
   }
@@ -701,6 +706,7 @@ a{
 @media screen and (max-width: 600px) {
   .top-bar {
     gap: 4px;
+    height: 43px;
     text-align: center;
   }
   .detail-nav {
@@ -711,10 +717,13 @@ a{
     background: var(--main-brown);
   }
   .main-header {
-    padding: 0px 8px;
+    padding: 1px 8px;
+    top:43px;
   }
   .search-box {
     margin: 3px 0;
+    padding-top: 0;
+    padding-bottom: 0
   }
   .main-nav {
     overflow-x: auto;
@@ -816,7 +825,18 @@ a{
   .step-item::after{
     top: 11px;
   }
-
+  .cart-popup{
+    right:20px;
+    width: 200px;
+    padding: 12px;
+  }
+  .top-bar .icon-box .cart-popup-img{
+    margin-left: 0;
+    margin-right: 6px;
+  }
+  .cart-popup-content > div{
+    margin-bottom: 8px;
+  }
   .main-nav,
   .main-header .logo,
   .main-header .icons,
@@ -825,3 +845,4 @@ a{
     display: none;
   }
 }
+

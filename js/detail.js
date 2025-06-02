@@ -113,11 +113,12 @@ class ProductDetail {
                         if (index > -1) {
                          carts.splice(index, 1, {id: 2, quantity: quantityInput.textContent})
                         } else {
-                        carts.push({id: 1, quantity: quantityInput.textContent})
+                        carts.push({id: 2, quantity: quantityInput.textContent})
                         }
                     }
                     addToCartTxt.innerHTML = carts.length
                     sessionStorage.setItem('cart',JSON.stringify(carts))
+                    window.renderCartCommon()
                     console.log('加入购物车', {
                         options: this.selectedOptions,
                         quantity: this.quantity
