@@ -845,4 +845,10 @@ a{
     display: none;
   }
 }
-
+@media screen and (max-width: 1370px) and (min-width: 1360px) {
+  .search-box {
+    flex: 1;
+    margin: 0 32px;
+    max-width: 820px;
+  }
+}
