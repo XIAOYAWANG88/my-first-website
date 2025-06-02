@@ -9,7 +9,7 @@ class BannerSlider {
         this.currentIndex = 0;
         this.totalItems = this.items.length;
         this.autoPlayInterval = null;
-        this.autoPlayDelay = 5000; // 5秒自动切换
+        this.autoPlayDelay = 3000; // 3秒自动切换
         
         this.init();
     }
