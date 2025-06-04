@@ -201,7 +201,7 @@
   background: #ff9900;
 }
 
-/* 响应式布局 */
+/* Responsive layout */
 @media (max-width: 912px) {
   .cart-main {
     flex-direction: column;
@@ -273,7 +273,7 @@
   }
 }
 
-/* 2. 右侧订单栏固定（PC端） */
+/* 2. Fixed the order column on the right (PC version) */
 .cart-summary.pc {
   position: sticky;
   top: 32px;

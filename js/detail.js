@@ -1,6 +1,6 @@
 class ProductDetail {
     constructor() {
-        this.selectedOptions = {}; // 存储所有规格的选择
+        this.selectedOptions = {}; // Store all specifications
         this.quantity = 1;
         this.minQuantity = 1;
         this.maxQuantity = 99;
@@ -9,16 +9,16 @@ class ProductDetail {
     }
     
     init() {
-        // 初始化规格选择
+        // Initialization specification selection
         this.initSizeSelection();
-        // 初始化数量控制
+        // Initial quantity control
         this.initQuantityControl();
-        // 初始化加入购物车按钮
+        // Initialize the Add to Cart button
         this.initAddToCart();
     }
     
     initSizeSelection() {
-        // 获取所有规格组
+        // Get all specification groups
         const sizeGroups = document.querySelectorAll('.product-size');
         
         sizeGroups.forEach(group => {
@@ -26,16 +26,16 @@ class ProductDetail {
             const sizeName = group.querySelector('.size-name').textContent.toLowerCase();
             
             if (sizeList) {
-                // 初始化选中状态
+                // Initialize selected state
                 this.selectedOptions[sizeName] = null;
                 
                 sizeList.addEventListener('click', (e) => {
                     if (e.target.tagName === 'SPAN') {
-                        // 移除其他选中状态
+                        // Remove other selected states
                         sizeList.querySelectorAll('span').forEach(span => {
                             span.classList.remove('selected');
                         });
-                        // 添加当前选中状态
+                        // Add the currently selected state
                         e.target.classList.add('selected');
                         this.selectedOptions[sizeName] = e.target.textContent;
                         this.updateAddToCartButton();
@@ -51,14 +51,14 @@ class ProductDetail {
         const quantityInput = document.querySelector('.quantity-input');
     
         if (minusBtn && plusBtn && quantityInput) {
-            // 减少数量
+            // reduce quantity
             minusBtn.addEventListener('click', () => {
                 if (this.quantity > this.minQuantity) {
                     this.quantity--;
                     this.updateQuantity();
                 }
             });
-            // 增加数量
+            // increase quantity
             plusBtn.addEventListener('click', () => {
                 if (this.quantity < this.maxQuantity) {
                     this.quantity++;
@@ -76,7 +76,7 @@ class ProductDetail {
         if (quantityInput && minusBtn && plusBtn) {
             quantityInput.textContent = this.quantity;
            
-            // 更新按钮状态
+            // Update button state
             minusBtn.disabled = this.quantity <= this.minQuantity;
             plusBtn.disabled = this.quantity >= this.maxQuantity;
         }
@@ -89,11 +89,11 @@ class ProductDetail {
         const cartPopup = document.getElementById('cart-popup');
         if (addToCartBtn) {
             addToCartBtn.addEventListener('click', () => {
-                // 检查是否所有规格都已选择
+                // Check that all specifications are selected
                 const allSelected = Object.values(this.selectedOptions).every(value => value !== null);
                 
                 if (allSelected) {
-                    // 这里添加加入购物车的逻辑
+                    // Add the logic of adding to the shopping cart here
                    
                     addToCartTxt.style.display = 'block'
                     cartPopup.style.display = 'block';
@@ -131,14 +131,14 @@ class ProductDetail {
     updateAddToCartButton() {
         const addToCartBtn = document.querySelector('.add-to-cart');
         if (addToCartBtn) {
-            // 检查是否所有规格都已选择
+            // Check that all specifications are selected
             const allSelected = Object.values(this.selectedOptions).every(value => value !== null);
             addToCartBtn.disabled = !allSelected;
         }
     }
 }
 
-// 页面加载完成后初始化
+// Initialize after the page is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new ProductDetail();
 }); 

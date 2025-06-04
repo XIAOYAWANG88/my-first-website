@@ -9,36 +9,36 @@ class BannerSlider {
         this.currentIndex = 0;
         this.totalItems = this.items.length;
         this.autoPlayInterval = null;
-        this.autoPlayDelay = 3000; // 3秒自动切换
+        this.autoPlayDelay = 3000; // 3 seconds automatic switching
         
         this.init();
     }
     
     init() {
-        // 绑定事件
+        // Binding events
         this.prevBtn.addEventListener('click', () => this.prev());
         this.nextBtn.addEventListener('click', () => this.next());
         
-        // 绑定指示器点击事件
+        // Binding indicator click event
         this.indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => this.goTo(index));
         });
         
-        // 鼠标悬停时暂停自动播放
+        // Pause autoplay on mouseover
         this.container.addEventListener('mouseenter', () => this.stopAutoPlay());
         this.container.addEventListener('mouseleave', () => this.startAutoPlay());
         
-        // 开始自动播放
+        // Start autoplay
         this.startAutoPlay();
     }
     
     updateSlider() {
-        // 更新轮播图显示
+        // Update the carousel display
         this.items.forEach((item, index) => {
             item.classList.toggle('active', index === this.currentIndex);
         });
         
-        // 更新指示器状态
+        // Update indicator status
         this.indicators.forEach((indicator, index) => {
             indicator.classList.toggle('active', index === this.currentIndex);
         });
@@ -71,7 +71,7 @@ class BannerSlider {
     }
 }
 
-// 页面加载完成后初始化轮播图
+// Initialize the carousel after the page is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new BannerSlider();
 }); 

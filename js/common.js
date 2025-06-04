@@ -5,21 +5,21 @@ searchInput.addEventListener('input', (e) => {
   if (e.target.value) {
     searchDropdown.style.display = 'flex';
   } else {
-    setTimeout(() => { // 延迟隐藏，避免点击下拉内容时立刻消失
+    setTimeout(() => { // Delay hiding to avoid immediate disappearance when clicking on the drop-down content
       searchDropdown.style.display = 'none';
     }, 150);
   }
 });
 searchInput.addEventListener('blur', () => {
-  setTimeout(() => { // 延迟隐藏，避免点击下拉内容时立刻消失
+  setTimeout(() => { // Delay hiding to avoid immediate disappearance when clicking on the drop-down content
     searchDropdown.style.display = 'none';
   }, 250);
 });
-// 获取购物车图标和弹窗
+// Get the shopping cart icon and pop-up window
 const cartIcon = document.querySelector('#icon-cart-menu');
 const cartPopup = document.getElementById('cart-popup');
 
-// 购物车图标和弹窗的显示/隐藏
+// Show/hide shopping cart icon and pop-up window
 // cartIcon && cartIcon.addEventListener('mouseenter', function() {
 //   cartPopup.style.display = 'block';
 //   renderCart()
@@ -49,7 +49,7 @@ cartIcon && cartIcon.addEventListener('click', function() {
 //   renderCart()
 // });
 
-// 模拟购物车数据
+// Simulate shopping cart data
 let cartData = [
   {
     id: 1,
@@ -69,7 +69,7 @@ let cartData = [
   }
 ];
 
-// 渲染购物车商品
+// Rendering shopping cart items
 function renderCart() {
   let carts = sessionStorage.getItem('cart')
   carts = carts ? JSON.parse(carts) : []
@@ -89,7 +89,7 @@ function renderCart() {
     console.log(item)
     // cartItem.className = 'suggest-product-card';
     cartItem.innerHTML = `
-      <img src="${item.img}" alt="商品图片" class="cart-popup-img">
+      <img src="${item.img}" alt="Product pictures" class="cart-popup-img">
       <div class="cart-popup-info">
           <div class="cart-popup-name">${item.name}</div>
           <div class="cart-popup-price">$${item.price.toFixed(2)}</div>

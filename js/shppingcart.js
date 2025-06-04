@@ -1,4 +1,4 @@
-// 模拟购物车数据
+// Simulate shopping cart data
 let cartDatas = [
   {
     id: 1,
@@ -24,7 +24,7 @@ cartDatas.forEach((item, idx) => {
   if (index === -1) return
   item.qty = carts[index].quantity
 })
-// 渲染购物车商品
+// Rendering shopping cart items
 function renderCart() {
   const cartList = document.querySelector('.cart-list');
   cartList.innerHTML = '';
@@ -53,7 +53,7 @@ function renderCart() {
   updateSummary();
 }
 
-// 更新总金额
+// Update total amount
 function updateSummary() {
   let orderPrice = 0;
   cartDatas.forEach(item => {
@@ -63,7 +63,7 @@ function updateSummary() {
   const discount = 0.0;
   const total = orderPrice + shipping - discount;
 
-  // PC端
+  // PC version
   document.querySelectorAll('.cart-summary-row').forEach(row => {
     if (row.children[0].textContent.includes('Order Price')) {
       row.children[1].textContent = `$${orderPrice.toFixed(2)}`;
@@ -78,13 +78,13 @@ function updateSummary() {
       row.children[1].textContent = `$${total.toFixed(2)}`;
     }
   });
-  // PC端大字
+  // Large characters on PC
   document.querySelectorAll('.cart-summary-final-price span').forEach(span => {
     span.textContent = `$${total.toFixed(2)}`;
   });
 }
 
-// 事件委托处理加减
+// Event delegation processing addition and subtraction
 document.addEventListener('click', function(e) {
   if (e.target.classList.contains('cart-qty-plus')) {
     const idx = e.target.getAttribute('data-idx');
@@ -106,5 +106,5 @@ document.addEventListener('click', function(e) {
   }
 });
 
-// 页面加载时渲染
+// Rendering on page load
 window.addEventListener('DOMContentLoaded', renderCart);

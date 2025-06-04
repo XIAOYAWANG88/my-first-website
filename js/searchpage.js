@@ -1,4 +1,4 @@
-// 1. 复制filter-sidebar内容到popup
+// 1. Copy filter-sidebar content to popup
 function moveFilterSidebarToPopup() {
   var sidebar = document.querySelector('.filter-sidebar');
   var container = document.getElementById('filterSidebarContainer');
@@ -7,7 +7,7 @@ function moveFilterSidebarToPopup() {
   }
 }
 
-// 2. 打开弹窗
+// 2. Open pop-up window
 document.getElementById('openFilterPopup').onclick = function() {
   moveFilterSidebarToPopup();
   document.getElementById('filterPopup').style.display = 'block';
@@ -18,7 +18,7 @@ document.getElementById('openFilterPopup').onclick = function() {
   document.getElementById('filterPopup').style.display = 'block';
   document.body.style.overflow = 'hidden';
 };
-// 3. 关闭弹窗
+// 3. Close pop-up window
 document.getElementById('filterPopupClose').onclick = function() {
   document.getElementById('filterPopup').style.display = 'none';
   document.body.style.overflow = '';

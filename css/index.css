@@ -32,7 +32,7 @@ height: 100%;
 object-fit: cover;
 }
 
-/* 轮播控制按钮 */
+/* Carousel control buttons */
 .banner-control {
 position: absolute;
 top: 50%;
@@ -63,7 +63,7 @@ left: 20px;
 right: 20px;
 }
 
-/* 轮播指示器 */
+/* Carousel indicator */
 .banner-indicators {
 position: absolute;
 bottom: 20px;
@@ -117,7 +117,7 @@ background: white;
   width: 80px;
   height: 80px;
 }
-/* 响应式布局 */
+/* Responsive layout */
 @media screen and (max-width:1370px) {
 .banner-container {
   height: 350px;

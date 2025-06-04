@@ -134,7 +134,7 @@
 .filter-sidebar-menu{
   display: none;
 }
-/* 弹窗遮罩 */
+/* Pop-up mask */
 .filter-popup {
   display: none;
   position: fixed;
@@ -184,7 +184,7 @@
   cursor: pointer;
   line-height: 1;
 }
-/* 响应式适配 */
+/* Responsive Adaptation */
 @media (max-width: 912px) {
   .searchpage-container {
     flex-direction: column;
@@ -298,7 +298,7 @@
   }
 }
 
-/* 统一美化单选框和多选框 */
+/* Unified beautification of radio buttons and multiple selection boxes */
 .filter-group input[type="radio"],
 .filter-group input[type="checkbox"] {
   appearance: none;
@@ -317,12 +317,12 @@
   display: inline-block;
 }
 
-/* 多选框为方形 */
+/* The checkbox is square */
 .filter-group input[type="checkbox"] {
   border-radius: 6px;
 }
 
-/* 选中时显示√ */
+/* Show when selected√ */
 .filter-group input[type="checkbox"]:checked::after {
   content: "✔";
   color: #fff;
@@ -339,14 +339,14 @@
   justify-content: center;
 }
 
-/* 选中时背景色 */
+/* Background color when selected */
 .filter-group input[type="checkbox"]:checked {
   background: #6b4f2a;
   border-color: #6b4f2a;
   margin-top: 0;
 }
 
-/* 单选框选中时显示圆圈内√ */
+/* When the radio button is selected, the circle is displayed√ */
 .filter-group input[type="radio"]:checked::after {
   content: "✔";
   color: #fff;
@@ -363,7 +363,7 @@
   justify-content: center;
 }
 
-/* 单选框选中时背景色 */
+/* Background color when radio button is selected */
 .filter-group input[type="radio"]:checked {
   background: #6b4f2a;
   border-color: #6b4f2a;

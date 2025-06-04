@@ -546,8 +546,8 @@ a{
 }
 .cart-popup {
   position: absolute;
-  top: 60px; /* 根据icon_cart的位置调整 */
-  right: 40px; /* 根据icon_cart的位置调整 */
+  top: 60px; /* Adjust according to the position of icon_cart */
+  right: 40px; /* Adjust according to the position of icon_cart */
   width: 240px;
   background: #FFFEF3;
   color: #333;
@@ -608,7 +608,7 @@ a{
   font-size: 1em;
   cursor: pointer;
 }
-/* 响应式布局 */
+/* Responsive layout */
 @media screen and (max-width: 1370px) {
   .main-header {
     padding: 8px 16px;

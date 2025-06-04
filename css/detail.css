@@ -252,7 +252,7 @@
   transform: none;
 }
 
-/* 响应式布局 */
+/* Responsive Adaptation */
 @media screen and (max-width: 1370px) {
   .detail-container {
     padding: 16px;
@@ -539,7 +539,7 @@
   margin-left: 2px;
 }
 
-/* 响应式适配 */
+/* Responsive Adaptation */
 @media (max-width: 912px) {
   .customer-reviews-section {
     padding: 18px 8px 10px 8px;

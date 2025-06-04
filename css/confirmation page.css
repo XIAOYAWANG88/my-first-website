@@ -152,7 +152,7 @@
   background: #4d361a;
 }
 
-/* 响应式适配 */
+/* Responsive Adaptation */
 @media (max-width: 912px) {
   .checkout-result-container {
     flex-direction: column;

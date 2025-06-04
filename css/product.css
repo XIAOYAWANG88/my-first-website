@@ -145,7 +145,7 @@
   color: #fff;
 }
 
-/* 响应式 */
+/* Responsive */
 @media (max-width: 912px) {
   .products-grid {
     grid-template-columns: 1fr 1fr;
